@@ -23,3 +23,13 @@ export const requests = [
     "budget": "$3000"
   }
 ];
+
+export const prepaids = [
+  {
+    "id": 1,
+    "request_person": "Nam Phuong",
+    "period": "2017",
+    "department": "VNPT Technology",
+
+  }
+]

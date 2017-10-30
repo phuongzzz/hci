@@ -6,6 +6,7 @@ import CreatePlan from "./Plans/CreatePlan";
 import Payment from "./PaymentSuggestion/Payment_suggestion";
 import Advances from "./Advanced/Advances";
 import Profile from "./Profile/Profile";
+import Prepaid from "./Prepaid/Prepaid";
 
 const Home = () => (
   <div>
@@ -43,6 +44,7 @@ class App extends React.Component {
               <li><Link to="/paymentsuggestion">Payment Suggestion</Link></li>
               <li><Link to="/advances">Advances</Link></li>
               <li><Link to="/profile">Profile</Link></li>
+              <li><Link to="/prepaid">Prepaid</Link></li>
             </ul>
           </div>
         </nav>
@@ -57,6 +59,7 @@ class App extends React.Component {
             <Route path="/paymentsuggestion" component={Payment}/>
             <Route path="/advances" component={Advances}/>
             <Route path="/profile" component={Profile}/>
+            <Route path="/prepaid" component={Prepaid}/>
           </Switch>
         </div>
       </div>
