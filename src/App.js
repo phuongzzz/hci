@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
+import Payment from "./Payment suggestion/payment_suggestion";
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
   </div>
 );
 
@@ -31,12 +31,14 @@ class App extends React.Component {
             <ul className="nav navbar-nav">
               <li><Link to="/category">Category</Link></li>
               <li><Link to="/products">Products</Link></li>
+              <li><Link to="/payments">Payments</Link></li>
             </ul>
           </div>
         </nav>
         <Route path="/" component={Home}/>
         <Route path="/category" component={Category}/>
         <Route path="/products" component={Products}/>
+        <Route path="/payments" component={Payment}/>
 
       </div>
     )
