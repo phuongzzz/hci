@@ -3,6 +3,8 @@ import { Link, Route, Switch } from 'react-router-dom';
 import PlanList from './Plans/PlanList';
 import Request from "./Request/Request";
 import CreatePlan from "./Plans/CreatePlan";
+import Payment from "./PaymentSuggestion/Payment_suggestion";
+import Advances from "./Advanced/Advances";
 
 const Home = () => (
   <div>
@@ -37,6 +39,8 @@ class App extends React.Component {
               <li><Link to="/plans">Plans</Link></li>
               <li><Link to="/requests">Requests</Link></li>
               <li><Link to="/createplan">Create New Plan</Link></li>
+              <li><Link to="/paymentsuggestion">Payment Suggestion</Link></li>
+              <li><Link to="/advances">Advances</Link></li>
             </ul>
           </div>
         </nav>
@@ -48,6 +52,8 @@ class App extends React.Component {
             <Route path="/plans" component={PlanList}/>
             <Route path="/requests" component={Request}/>
             <Route path="/createplan" component={CreatePlan}/>
+            <Route path="/paymentsuggestion" component={Payment}/>
+            <Route path="/advances" component={Advances}/>
           </Switch>
         </div>
       </div>
