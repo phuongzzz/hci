@@ -1,0 +1,26 @@
+
+.avatar{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.avatar_img{
+  width: 15%;
+}
+
+.avatar > p{
+  font-size: 20px;
+}
+
+#full_name{
+  font-weight: bold;
+}
+
+.panel-label{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cuong-head{
+  font-weight: bold;
+}

@@ -5,6 +5,7 @@ import Request from "./Request/Request";
 import CreatePlan from "./Plans/CreatePlan";
 import Payment from "./PaymentSuggestion/Payment_suggestion";
 import Advances from "./Advanced/Advances";
+import Profile from "./Profile/Profile";
 
 const Home = () => (
   <div>
@@ -41,6 +42,7 @@ class App extends React.Component {
               <li><Link to="/createplan">Create New Plan</Link></li>
               <li><Link to="/paymentsuggestion">Payment Suggestion</Link></li>
               <li><Link to="/advances">Advances</Link></li>
+              <li><Link to="/profile">Profile</Link></li>
             </ul>
           </div>
         </nav>
@@ -54,6 +56,7 @@ class App extends React.Component {
             <Route path="/createplan" component={CreatePlan}/>
             <Route path="/paymentsuggestion" component={Payment}/>
             <Route path="/advances" component={Advances}/>
+            <Route path="/profile" component={Profile}/>
           </Switch>
         </div>
       </div>
