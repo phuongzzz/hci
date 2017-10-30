@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import PlanList from './Plans/PlanList';
 import Request from "./Request/Request";
 import CreatePlan from "./Plans/CreatePlan";
@@ -41,12 +41,14 @@ class App extends React.Component {
           </div>
         </nav>
         <div className="container">
-          <Route exact={true} path="/" component={Home}/>
-          <Route path="/category" component={Category}/>
-          <Route path="/products" component={Products}/>
-          <Route path="/plans" component={PlanList}/>
-          <Route path="/requests" component={Request}/>
-          <Route path="/createplan" component={CreatePlan}/>
+          <Switch>
+            <Route exact={true} path="/" component={Home}/>
+            <Route path="/category" component={Category}/>
+            <Route path="/products" component={Products}/>
+            <Route path="/plans" component={PlanList}/>
+            <Route path="/requests" component={Request}/>
+            <Route path="/createplan" component={CreatePlan}/>
+          </Switch>
         </div>
       </div>
     )

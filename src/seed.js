@@ -5,6 +5,13 @@ export const plans = [
     "plan_name": "TMS",
     "responsible_person": "nam phuong",
     "period": "2017-now"
+  },
+  {
+    "id": 2,
+    "department": "framgia",
+    "plan_name": "My Stories",
+    "responsible_person": "nam phuong",
+    "period": "2017"
   }
 ];
 
