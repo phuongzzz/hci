@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import PlanList from './Plans/PlanList';
 import Request from "./Request/Request";
+import CreatePlan from "./Plans/CreatePlan";
 
 const Home = () => (
   <div>
@@ -35,15 +36,17 @@ class App extends React.Component {
               <li><Link to="/products">Products</Link></li>
               <li><Link to="/plans">Plans</Link></li>
               <li><Link to="/requests">Requests</Link></li>
+              <li><Link to="/createplan">Create New Plan</Link></li>
             </ul>
           </div>
         </nav>
         <div className="container">
-          <Route path="/" component={Home}/>
+          <Route exact={true} path="/" component={Home}/>
           <Route path="/category" component={Category}/>
           <Route path="/products" component={Products}/>
           <Route path="/plans" component={PlanList}/>
           <Route path="/requests" component={Request}/>
+          <Route path="/createplan" component={CreatePlan}/>
         </div>
       </div>
     )
