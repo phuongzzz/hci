@@ -34,7 +34,7 @@ const Prepaid = ({match}) => {
           </table>
         </div>
         <div className="col-md-3">
-          <h1>Plan details</h1>
+          <h1>Prepaid request details</h1>
           <Route path={`${match.url}/:prepaidId`}
                  component={(props)=><SinglePrepaid data={prepaids} {...props}/>}/>
         </div>
