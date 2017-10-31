@@ -1,9 +1,25 @@
 import React from 'react';
+import './CreatePlan.css';
+import toastr from 'toastr';
+import history from '../history';
 
 export class CreatePlan extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    toastr.success("Your new plan has been created");
+    history.push("/plans");
+  }
+
   render() {
     return (
       <div className="row">
+        <h1 className="text-center">Create new plan</h1>
         <div className="col-xs-6 form-group">
           <label>Plan's Name</label>
           <input className="form-control" type="text" ref="plan_name"/>
@@ -37,8 +53,8 @@ export class CreatePlan extends React.Component {
           <textarea className="form-control" type="text" ref="description" rows={5}/>
         </div>
         <div className="text-center">
-          <button className="btn btn-primary">submit</button>
-          <button className="btn btn-danger">cancel</button>
+          <button className="btn btn-primary phuong-btn" onClick={this.handleSubmit}>submit</button>
+          <button className="btn btn-danger phuong-btn">cancel</button>
         </div>
       </div>
     )
