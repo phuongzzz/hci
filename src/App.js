@@ -35,21 +35,38 @@ class App extends React.Component {
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
-              <Link className="navbar-brand" to="/">WebSiteName</Link>
+              <Link className="navbar-brand" to="/">HCI-02</Link>
             </div>
             <ul className="nav navbar-nav">
               {/*<li><Link to="/category">Category</Link></li>*/}
               {/*<li><Link to="/products">Products</Link></li>*/}
-              <li><Link to="/plans">Plans</Link></li>
-              <li><Link to="/listpayment">ListPayment</Link></li>
-              <li><Link to="/createplan">Create New Plan</Link></li>
-              <li><Link to="/paymentsuggestion">Payment Suggestion</Link></li>
-              <li><Link to="/advances">Advances</Link></li>
+                <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plans <span className="caret"></span></a>
+                    <ul className="dropdown-menu">
+                        <li><Link to="/plans">All Plan</Link></li>
+                        <li><Link to="/createplan">Create New Plan</Link></li>
+                    </ul>
+                </li>
+                <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Payments <span className="caret"></span></a>
+                    <ul className="dropdown-menu">
+                        <li><Link to="/listpayment">ListPayment</Link></li>
+                        <li><Link to="/paymentsuggestion">Payment Suggestion</Link></li>
+                    </ul>
+                </li>
+                <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advances <span className="caret"></span></a>
+                    <ul className="dropdown-menu">
+                        <li><Link to="/advances">Advances Request</Link></li>
+                        <li><Link to="/prepaid">Prepaid</Link></li>
+                    </ul>
+                </li>
               <li><Link to="/profile">Profile</Link></li>
-              <li><Link to="/prepaid">Prepaid</Link></li>
+
             </ul>
           </div>
         </nav>
+
         <div className="container">
           <Switch>
             <Route exact={true} path="/" component={Home}/>
