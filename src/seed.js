@@ -83,9 +83,35 @@ export const requests = [
     "id": 1,
     "department": "framgia",
     "request_person": "nam phuong",
-    "plan_id": 1
+    "plan_id": 1,
     "budget": "$3000"
   },
+  {
+    "id": 2,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  },
+  {
+    "id": 3,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  },
+  {
+    "id": 4,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  },
+  {
+    "id": 5,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  }
+];
+export const prepaids = [
   {
     "id": 2,
     "department": "framgia",
@@ -136,7 +162,7 @@ export const requests = [
     "budget": "$2500"
   },
    {
-    "id": 9
+    "id": 9,
     "department": "framgia",
     "request_person": "co tuan",
     "plan_id": 7, 
@@ -169,5 +195,4 @@ export const requests = [
     "plan_id": 9, 
     "budget": "$6700"
   }
-
 ];

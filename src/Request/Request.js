@@ -5,7 +5,7 @@ export class Request extends React.Component {
   render() {
     const requestList = requests.map((request) => (
       <tr key={request.id}>
-        <td>{request.id}</td>
+        <td>{request.id}</td
         <td>{request.department}</td>
         <td>{request.request_person}</td>
         <td>{request.budget}</td>
