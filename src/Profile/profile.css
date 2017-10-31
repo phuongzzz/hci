@@ -8,17 +8,22 @@
   width: 15%;
 }
 
-.avatar > p{
+#full_name{
+  font-weight: bold;
   font-size: 20px;
 }
 
-#full_name{
-  font-weight: bold;
+#user_name{
+  font-size: 15px;
 }
 
 .panel-label{
   font-size: 15px;
   font-weight: bold;
+}
+
+.cuong-left-panel{
+  border-right: 1px solid #E4E4E4;
 }
 
 .cuong-head{
