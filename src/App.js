@@ -7,6 +7,7 @@ import Payment from "./PaymentSuggestion/Payment_suggestion";
 import Advances from "./Advanced/Advances";
 import Profile from "./Profile/Profile";
 import Prepaid from "./Prepaid/Prepaid";
+import './App.css';
 
 const Home = () => (
   <div>

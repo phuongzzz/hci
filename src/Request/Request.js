@@ -9,7 +9,7 @@ export class Request extends React.Component {
         <td>{request.department}</td>
         <td>{request.request_person}</td>
         <td>{request.budget}</td>
-        <td><a href="#">Approve</a> | <a href="#">Reject</a></td>
+        <td><a className="approve" href="#">Approve</a> | <a className="reject" href="#">Reject</a></td>
       </tr>
     ));
     return (
