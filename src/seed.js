@@ -84,31 +84,72 @@ export const requests = [
     "department": "framgia",
     "request_person": "nam phuong",
     "plan_id": 1,
-    "budget": "$3000"
+    "budget": "$3900"
   },
   {
     "id": 2,
-    "department": "framgia",
-    "request_person": "nam phuong",
-    "budget": "$3000"
+    "department": "Marketing",
+    "request_person": "phu cuong",
+    "budget": "$3600"
   },
   {
     "id": 3,
-    "department": "framgia",
-    "request_person": "nam phuong",
-    "budget": "$3000"
+    "department": "Test",
+    "request_person": "le mai",
+    "budget": "$4700"
   },
   {
     "id": 4,
-    "department": "framgia",
-    "request_person": "nam phuong",
-    "budget": "$3000"
+    "department": "Develop",
+    "request_person": "quy nguyen",
+    "budget": "$4800"
   },
   {
     "id": 5,
     "department": "framgia",
-    "request_person": "nam phuong",
-    "budget": "$3000"
+    "request_person": "manh dung",
+    "budget": "$3900"
+  },
+  {
+    "id": 6,
+    "department": "HR",
+    "request_person": "co tuan",
+    "budget": "$2900"
+  },
+  {
+    "id": 7,
+    "department": "framgia",
+    "request_person": "nho tuong",
+    "budget": "$2500"
+  },
+  {
+    "id": 8,
+    "department": "Marketing",
+    "request_person": "ngoc luc",
+    "budget": "$3300"
+  },
+  {
+    "id": 9,
+    "department": "framgia",
+    "request_person": "duc canh",
+    "budget": "$4400"
+  },
+  {
+    "id": 10,
+    "department": "framgia",
+    "request_person": "phu cuong",
+    "budget": "$5000"
+  },
+  {
+    "id": 11,
+    "department": "framgia",
+    "request_person": "phu cuong",
+    "budget": "$4000"
+  },{
+    "id": 12,
+    "department": "framgia",
+    "request_person": "ngoc luc",
+    "budget": "$2000"
   }
 ];
 export const prepaids = [
