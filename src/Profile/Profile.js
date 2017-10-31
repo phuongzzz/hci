@@ -1,16 +1,18 @@
 import React from 'react';
 import './profile.css';
+import ava from "./avatar.png"
 
 class Profile extends React.Component {
   render() {
     return (
       <div className="col-md-10 col-md-offset-1">
         <div className="row avatar">
-          <img className="img-circle avatar_img" src="avatar.png" alt=""/>
-          <p id="full_name">Full Name</p>
-          <p>Username</p>
+          <img className="img-circle avatar_img" src={ava} alt=""/>
+          <p id="full_name">Nguyen Cuong</p>
+          <p id="username">phucuong0201</p>
         </div>
-        <div className="col-md-5">
+        <br/>
+        <div className="col-md-6 cuong-left-panel">
           <p className="panel-label">Basic Information</p>
           <div className="panel">
             <div className="panel-body">
@@ -83,7 +85,7 @@ class Profile extends React.Component {
             </div>
           </div>
         </div>
-        <div className="col-md-5 col-md-offset-2">
+        <div className="col-md-6">
           <p className="panel-label">System Settings</p>
           <div className="panel">
             <div className="panel-body">

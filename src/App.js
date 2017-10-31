@@ -29,6 +29,7 @@ const Products = () => (
 
 class App extends React.Component {
   render() {
+      document.body.style.backgroundColor = 'honeydew';
     return (
       <div>
         <nav className="navbar navbar-default">
