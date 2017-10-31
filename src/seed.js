@@ -21,6 +21,30 @@ export const requests = [
     "department": "framgia",
     "request_person": "nam phuong",
     "budget": "$3000"
+  },
+  {
+    "id": 1,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  },
+  {
+    "id": 1,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  },
+  {
+    "id": 1,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
+  },
+  {
+    "id": 1,
+    "department": "framgia",
+    "request_person": "nam phuong",
+    "budget": "$3000"
   }
 ];
 

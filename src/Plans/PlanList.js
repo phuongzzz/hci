@@ -2,6 +2,7 @@ import React from 'react';
 import Plan from './Plan';
 import  { plans } from '../seed';
 import  { Link, Route } from 'react-router-dom';
+import './Plan.css';
 
 const PlanList = ({match}) => {
 
@@ -14,6 +15,7 @@ const PlanList = ({match}) => {
       </Link> </td>
       <td>{plan.responsible_person}</td>
       <td>{plan.period}</td>
+      <td><a href="#">Approve</a> | <a href="#" className="reject">Reject</a></td>
     </tr>
   ));
   return (
@@ -27,6 +29,7 @@ const PlanList = ({match}) => {
             <th>Plan Name</th>
             <th>Responsible Person</th>
             <th>Time</th>
+            <th>Action</th>
           </tr>
           </thead>
           <tbody>

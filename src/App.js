@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import PlanList from './Plans/PlanList';
-import Request from "./Request/Request";
+import ListPayment from "./ListPayment/ListPayment";
 import CreatePlan from "./Plans/CreatePlan";
 import Payment from "./PaymentSuggestion/Payment_suggestion";
 import Advances from "./Advanced/Advances";
@@ -36,10 +36,10 @@ class App extends React.Component {
               <Link className="navbar-brand" to="/">WebSiteName</Link>
             </div>
             <ul className="nav navbar-nav">
-              <li><Link to="/category">Category</Link></li>
-              <li><Link to="/products">Products</Link></li>
+              {/*<li><Link to="/category">Category</Link></li>*/}
+              {/*<li><Link to="/products">Products</Link></li>*/}
               <li><Link to="/plans">Plans</Link></li>
-              <li><Link to="/requests">Requests</Link></li>
+              <li><Link to="/listpayment">ListPayment</Link></li>
               <li><Link to="/createplan">Create New Plan</Link></li>
               <li><Link to="/paymentsuggestion">Payment Suggestion</Link></li>
               <li><Link to="/advances">Advances</Link></li>
@@ -51,10 +51,10 @@ class App extends React.Component {
         <div className="container">
           <Switch>
             <Route exact={true} path="/" component={Home}/>
-            <Route path="/category" component={Category}/>
-            <Route path="/products" component={Products}/>
+            {/*<Route path="/category" component={Category}/>*/}
+            {/*<Route path="/products" component={Products}/>*/}
             <Route path="/plans" component={PlanList}/>
-            <Route path="/requests" component={Request}/>
+            <Route path="/listpayment" component={ListPayment}/>
             <Route path="/createplan" component={CreatePlan}/>
             <Route path="/paymentsuggestion" component={Payment}/>
             <Route path="/advances" component={Advances}/>
