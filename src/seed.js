@@ -4,6 +4,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "TMS",
     "responsible_person": "nam phuong",
+    "plan_time": "2 days",
+    "plan_budget": "$10000",
+    "requirement": "get earlier",
+    "location": "Ha Noi",
+    "transport": "car",
+    "description": "test car",
     "period": "2017-now"
   },
   {
@@ -11,13 +17,25 @@ export const plans = [
     "department": "framgia",
     "plan_name": "My Stories",
     "responsible_person": "nam phuong",
+     "plan_time": "9 days",
+    "plan_budget": "$30000",
+    "requirement": "full project",
+    "location": "Ha Noi",
+    "transport": "bike",
+    "description": "create my Stories",
     "period": "2017"
   },
   {
     "id": 3,
     "department": "framgia",
-    "plan_name": "Book",
+    "plan_name": "Buy Book",
     "responsible_person": "le mai",
+     "plan_time": "10 days",
+    "plan_budget": "$40000",
+    "requirement": "",
+    "location": "Ha Noi",
+    "transport": "car",
+    "description": "test car",
     "period": "2017"
   },
   {
@@ -25,6 +43,12 @@ export const plans = [
     "department": "Marketing",
     "plan_name": "Meet Customer",
     "responsible_person": "phu cuong",
+     "plan_time": "1 weeks",
+    "plan_budget": "$60000",
+    "requirement": "contract",
+    "location": "Ha Long",
+    "transport": "bus",
+    "description": "meet and sign contract",
     "period": "2017"
   },
   {
@@ -32,6 +56,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "Check store",
     "responsible_person": "quy nguyen",
+     "plan_time": "2 days",
+    "plan_budget": "$10000",
+    "requirement": "",
+    "location": "Hai Phong",
+    "transport": "car",
+    "description": "test car",
     "period": "2017"
   },
    {
@@ -39,6 +69,12 @@ export const plans = [
     "department": "dev",
     "plan_name": "go to talk show",
     "responsible_person": "ngoc luc",
+     "plan_time": "2 days",
+    "plan_budget": "$10000",
+    "requirement": "",
+    "location": "Ha Noi",
+    "transport": "car",
+    "description": "test car",
     "period": "2017"
   },
    {
@@ -46,6 +82,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "Check product",
     "responsible_person": "duc canh",
+     "plan_time": "2 days",
+    "plan_budget": "$10000",
+    "requirement": "",
+    "location": "Ha Noi",
+    "transport": "car",
+    "description": "test car",
     "period": "2017"
   },
    {
@@ -53,6 +95,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "Visit Customer",
     "responsible_person": "manh dung",
+     "plan_time": "2 days",
+    "plan_budget": "$30000",
+    "requirement": "",
+    "location": "Ha Noi",
+    "transport": "car",
+    "description": "test car",
     "period": "2017"
   },
    {
@@ -60,6 +108,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "Check store",
     "responsible_person": "trong hoang",
+     "plan_time": "2 days",
+    "plan_budget": "$20000",
+    "requirement": "",
+    "location": "Ha Noi",
+    "transport": "car",
+    "description": "test car",
     "period": "2017"
   },
    {
@@ -67,6 +121,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "Visit Customer",
     "responsible_person": "co tuan",
+     "plan_time": "2 days",
+    "plan_budget": "$60000",
+    "requirement": "",
+    "location": "Ha Giang",
+    "transport": "car",
+    "description": "test",
     "period": "2017"
   },
   {
@@ -74,6 +134,12 @@ export const plans = [
     "department": "framgia",
     "plan_name": "Visit Customer",
     "responsible_person": "nho tuong",
+     "plan_time": "2 days",
+    "plan_budget": "$90000",
+    "requirement": "",
+    "location": "Ho Chi Minh City",
+    "transport": "car",
+    "description": "test",
     "period": "2017"
   }
 ];
