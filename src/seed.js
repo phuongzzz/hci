@@ -83,7 +83,7 @@ export const requests = [
     "id": 1,
     "department": "framgia",
     "request_person": "nam phuong",
-    "plan_id": 1
+    "plan_id": 1,
     "budget": "$3000"
   },
   {
