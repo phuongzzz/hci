@@ -13,12 +13,12 @@ const NavigationBar = React.createClass({
     var role = sessionStorage.getItem('role');
     if (role === null) {
       return (
-        <nav className="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
+        <nav className="navbar navbar-embossed navbar-fixed-top" role="navigation">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <Link to="/login" className="btn btn-primary navbar-right log-btn">Login</Link>
@@ -48,7 +48,7 @@ const NavigationBar = React.createClass({
               <li><Link to="/users">Users</Link></li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
+              onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -89,7 +89,7 @@ const NavigationBar = React.createClass({
               <li><Link to="/status-internships">Internship Status</Link></li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
+              onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -127,7 +127,7 @@ const NavigationBar = React.createClass({
               <li><Link to="/status-internships">Internship Status</Link></li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
+              onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -166,7 +166,7 @@ const NavigationBar = React.createClass({
               <li><Link to="/status-internships">Internship Status</Link></li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
+              onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -193,7 +193,7 @@ const NavigationBar = React.createClass({
               </li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
+              onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -229,7 +229,7 @@ const NavigationBar = React.createClass({
               <li><Link to="/respondings">Forum</Link></li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
+              onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
