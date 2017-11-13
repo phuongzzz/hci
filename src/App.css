@@ -1,20 +1,32 @@
-* {
-  transition: all ease .25s;
-}
-.approve {
-  color: #2ecc71;
-  font-weight: bolder;
+.App {
+  text-align: center;
 }
 
-.approve:hover {
-  color: #595d64;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
-.reject {
-  color: #e74c3c;
-  font-weight: bolder;
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
 
-.reject:hover {
-  color: #595d64;
+.App-intro {
+  font-size: large;
 }
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+ body {
+   /*background-color: #E9EBEE;*/
+ }
+
+ .content-wrapper {
+   margin-top: 53px;
+   /*height: 100vh;*/
+ }
