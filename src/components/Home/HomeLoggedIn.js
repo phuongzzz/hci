@@ -5,21 +5,79 @@ import './home-logged-in.css';
 const HomeLoggedIn = React.createClass({
   render() {
     var allUsers = this.props.users;
-    var currentUser = _.find(allUsers, {username: sessionStorage.getItem('username')});
+    var currentUser = _.find(allUsers, { username: sessionStorage.getItem('username') });
     // console.log(currentUser.username);
     return (
-      <div className="profile-wrapper">
-        <div className="container">
+      <div className="phuong-profile-wrapper container-fluid">
+        <h6 className="edit-profile-title">Edit Profile</h6>
+        <div className="edit-content-wrapper">
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <h6 className="profile-title">Hi, {currentUser.name}! Here are your brief information</h6>
-              <div className="profile-info">
-                <p><span className="profile-username">Your username: </span>{currentUser.username}</p>
-                <p><span className="profile-email">Your email: </span>{currentUser.email}</p>
-                <p><span className="profile-name">Your name: </span>{currentUser.name}</p>
-                <p><span className="profile-phone">Your phone: </span>{currentUser.phonenumber}</p>
-                <p><span className="profile-dob">Your birthday: </span>{currentUser.dateofbirth}</p>
-                <p><span className="profile-role">Your role: </span>{currentUser.role}</p>
+            <div className="col-md-4">
+              <div className="phuong-card">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
+                <div className="container">
+                  <h4><b>John Doe</b></h4>
+                  <p>Architect & Engineer</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-8">
+              <div className="row">
+                <div className="col-xs-6">
+                  <form id="form1" className="well well-lg">
+                    <div className="form-group">
+                      <label>First Name</label>
+                      <input type="name" className="form-control" id="exampleInputName" placeholder="First Name" />
+                    </div>
+                    <div className="form-group">
+                      <label for="exampleInputLastName">Last Name</label>
+                      <input type="lastname" className="form-control" id="exampleInputLastName" placeholder="Last Name" />
+                    </div>
+                    <div className="form-group">
+                      <label for="exampleInputPhone">Phone</label>
+                      <input type="phone" className="form-control" id="exampleInputPhone" placeholder="Phone" />
+                    </div>
+                    <div className="form-group">
+                      <label for="exampleInputAddr">Address</label>
+                      <input type="addr" className="form-control" id="exampleInputAddr" placeholder="Address" />
+                    </div>
+                    <div className="checkbox">
+                      <label>
+                        <input type="checkbox" /> Check me out
+                      </label>
+                    </div>
+                  </form>
+                  <div className="well well-sm">
+                    <button type="submit" className="btn btn-success" form="form1">Submit Form#1</button>
+                  </div>
+                </div>
+                <div className="col-xs-6">
+                  <div className="well well-lg">
+                    <div className="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" form="form1" />
+                    </div>
+                    <div className="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" form="form1" />
+                    </div>
+                  </div>
+                  <form className="well well-lg">
+                    <div className="form-group">
+                      <label for="exampleInputFile">File input</label>
+                      <input type="file" id="exampleInputFile" />
+                      <p className="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div className="checkbox">
+                      <label>
+                        <input type="checkbox" /> Check me out
+                      </label>
+                    </div>
+                  </form>
+                  <div className="well well-sm">
+                    <button type="submit" className="btn btn-success" form="form2">Submit Form#2</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

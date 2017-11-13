@@ -33,7 +33,7 @@ const NavigationBar = React.createClass({
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
@@ -61,7 +61,7 @@ const NavigationBar = React.createClass({
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
@@ -102,7 +102,7 @@ const NavigationBar = React.createClass({
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
@@ -140,7 +140,7 @@ const NavigationBar = React.createClass({
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
@@ -179,7 +179,7 @@ const NavigationBar = React.createClass({
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
@@ -206,7 +206,7 @@ const NavigationBar = React.createClass({
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>
             </button>
-            <Link className="navbar-brand" to="/">SIE Internship</Link>
+            <Link className="navbar-brand" to="/">Office Management</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">

@@ -28,3 +28,28 @@
 .profile-info p:hover {
   background-color: rgba(149, 165, 166,.1);
 }
+
+/* new */
+.phuong-profile-wrapper {
+  text-align: left;
+  background-color: #F3F3EF;
+  padding: 0 200px;
+}
+
+.phuong-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+}
+
+.phuong-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.phuong-card img {
+  width: 100%;
+}
+
+.container {
+    padding: 2px 16px;
+}
