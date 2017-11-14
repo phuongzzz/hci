@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import './report-page.css';
 import toastr from 'toastr';
+import { hashHistory } from 'react-router';
 
 const ReportPage = React.createClass({
   getInitialState: function() {
@@ -22,8 +23,9 @@ const ReportPage = React.createClass({
   handleCancel(e) {
     e.preventDefault();
     if(confirm("Are you sure?")) {
-      this.setState({ showResponse: !this.state.showResponse });
-      toastr.error("Cancelled adding report");
+      // this.setState({ showResponse: !this.state.showResponse });
+      hashHistory.push("/");
+      toastr.error("Cancelled adding request");
     }
   },
 
@@ -44,7 +46,7 @@ const ReportPage = React.createClass({
 
     this.props.addNewReport(id, student_id, name, link);
 
-    toastr.success(name + " " + link);
+    toastr.success("Create payment reques done");
   },
 
   render(){
@@ -60,38 +62,36 @@ const ReportPage = React.createClass({
               <div className="row">
         <div className="col-md-8 col-md-offset-2">
               <div className="row">
+                <form id="form1" className="well well-lg">
                 <div className="col-xs-6">
-                  <form id="form1" className="well well-lg">
                     <div className="form-group">
-                      <label>Dear</label>
-                      <input type="name" className="form-control" id="exampleInputName" placeholder="" />
+                      <label>Dear (*)</label>
+                      <input required type="name" className="form-control" id="exampleInputName" placeholder="" />
                     </div>
                     <div className="form-group">
-                      <label>Full Name</label>
-                      <input type="lastname" className="form-control" id="exampleInputLastName" placeholder="Full Name" />
+                      <label>Full Name (*)</label>
+                      <input required type="lastname" className="form-control" id="exampleInputLastName" placeholder="Full Name" />
                     </div>
                     <div className="form-group">
-                      <label>Department</label>
-                      <input type="phone" className="form-control" id="exampleInputPhone" placeholder="Department" />
+                      <label>Department (*)</label>
+                      <input required type="phone" className="form-control" id="exampleInputPhone" placeholder="Department" />
                     </div>
                     <div className="form-group">
                       <label>Payment's description</label>
-                      <input type="addr" className="form-control" id="exampleInputAddr" placeholder="Payment's description" />
+                      <input required type="addr" className="form-control" id="exampleInputAddr" placeholder="Payment's description" />
                     </div>
-                  </form>
                 </div>
                 <div className="col-xs-6">
                   <div className="well well-lg">
                     <div className="form-group">
-                      <label>Quanity</label>
-                      <input type="text" className="form-control" id="exampleInputEmail1" placeholder="Quanity" form="form1" />
+                      <label>Quanity (*)</label>
+                      <input required type="text" className="form-control" id="exampleInputEmail1" placeholder="Quanity" form="form1" />
                     </div>
                     <div className="form-group">
-                      <label>Card Number</label>
-                      <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Card Number" form="form1" />
+                      <label>Card Number (*)</label>
+                      <input required type="number" className="form-control" id="exampleInputPassword1" placeholder="Card Number" form="form1" />
                     </div>
                   </div>
-                  <form className="well well-lg">
                     <div className="form-group">
                       <label>Required Documents</label>
                       <input type="file" id="exampleInputFile" />
@@ -102,17 +102,15 @@ const ReportPage = React.createClass({
                         <input type="checkbox" />Choose many files
                       </label>
                     </div>
-                  </form>
-                  <div className="well well-sm">
-                    <button type="submit" className="btn btn-success" form="form2">Submit Your Request</button>
-                  </div>
+                      <button type="submit" className="btn btn-success">Submit Your Request</button>
+                  &nbsp; &nbsp;
+                  <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
                 </div>
+                </form>
               </div>
             </div>
       </div>
       </div>
-
-
     )
   }
 });

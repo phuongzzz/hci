@@ -1,14 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router';
 import './listcv.css';
+import { hashHistory } from 'react-router';
+import toastr from 'toastr';
 // import {Icon} from 'react-fa';
 
 const ListCVPage = React.createClass({
+  handleCancel(e) {
+    e.preventDefault();
+    if(confirm("Are you sure?")) {
+      hashHistory.push("/");
+      toastr.warning("Cancel creating new request");
+    } else {
+      toastr.success("Create new request done");
+    }
+  },
+
   render() {
     return (
       <div className="container">
       <h3 className="text-left">New Plan Request</h3>
         <div className="row">
+          <form action="" className="form-group">
           <div className="col-md-6">
             <h6 className="cuong-panel-title text-left">User Info</h6>
             <div className="profile-right cuong-user-info">
@@ -17,34 +30,34 @@ const ListCVPage = React.createClass({
                   <ul className="list-unstyled task-list">
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Employee Name</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Your Name Here.." /></span></div>
+                        <div className="col-md-4"><span>Employee Name (*)</span></div>
+                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" required placeholder="Enter Your Name Here.." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Phone</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Your Phone Number Here..." /></span></div>
+                        <div className="col-md-4"><span>Phone (*)</span></div>
+                        <div className="col-md-8"><span><input required type="text" className="cuong-input-box form-control" placeholder="Enter Your Phone Number Here..." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Email</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Your Email Here.." /></span></div>
+                        <div className="col-md-4"><span>Email (*)</span></div>
+                        <div className="col-md-8"><span><input required type="text" className="cuong-input-box form-control" placeholder="Enter Your Email Here.." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Bank Account</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Your Bank Account Here..." /></span></div>
+                        <div className="col-md-4"><span>Bank Account (*)</span></div>
+                        <div className="col-md-8"><span><input type="text" required className="cuong-input-box form-control" placeholder="Enter Your Bank Account Here..." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <div className="row">
-                      <div className="col-md-4"><span>Department</span></div>
+                      <div className="col-md-4"><span>Department (*)</span></div>
                       <div className="col-md-8">
                         <div className="dropdown">
                           <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Department
@@ -71,29 +84,29 @@ const ListCVPage = React.createClass({
                   <ul className="list-unstyled task-list">
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Time</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Time Here.." /></span></div>
+                        <div className="col-md-4"><span>Time (*)</span></div>
+                        <div className="col-md-8"><span><input required type="text" className="cuong-input-box form-control" placeholder="Enter Time Here.." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Place</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Place Here..." /></span></div>
+                        <div className="col-md-4"><span>Place (*)</span></div>
+                        <div className="col-md-8"><span><input required type="text" className="cuong-input-box form-control" placeholder="Enter Place Here..." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Estimated Cost</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-input-box form-control" placeholder="Enter Number Here.." /></span></div>
+                        <div className="col-md-4"><span>Estimated Cost (*)</span></div>
+                        <div className="col-md-8"><span><input type="text" required className="cuong-input-box form-control" placeholder="Enter Number Here.." /></span></div>
                       </div>
                     </li>
                     <hr />
                     <li>
                       <div className="row">
-                        <div className="col-md-4"><span>Business Trip Content</span></div>
-                        <div className="col-md-8"><span><input type="text" className="cuong-trip-content form-control" placeholder="Enter Business Trip Content Here..." /></span></div>
+                        <div className="col-md-4"><span>Business Trip Content (*)</span></div>
+                        <div className="col-md-8"><span><input type="text"  required className="cuong-trip-content form-control" placeholder="Enter Business Trip Content Here..." /></span></div>
                       </div>
                     </li>
                   </ul>
@@ -101,6 +114,10 @@ const ListCVPage = React.createClass({
               </div>
             </div>
           </div>
+            <button type="submit" className="btn btn-success btn-lg">Submit</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-danger btn-lg" onClick={this.handleCancel}>Cancel</button>
+          </form>
         </div>
 
         <div className="row">
