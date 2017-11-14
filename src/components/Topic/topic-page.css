@@ -33,3 +33,12 @@
   text-align: center;
 }
 
+.mai_reject {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.glyphicon-ok {
+  color: #2ecc6a;
+  cursor: pointer;
+}

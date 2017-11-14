@@ -30,15 +30,15 @@ const HomeLoggedIn = React.createClass({
                       <input type="name" className="form-control" id="exampleInputName" placeholder="First Name" />
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputLastName">Last Name</label>
+                      <label>Last Name</label>
                       <input type="lastname" className="form-control" id="exampleInputLastName" placeholder="Last Name" />
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputPhone">Phone</label>
+                      <label>Phone</label>
                       <input type="phone" className="form-control" id="exampleInputPhone" placeholder="Phone" />
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputAddr">Address</label>
+                      <label>Address</label>
                       <input type="addr" className="form-control" id="exampleInputAddr" placeholder="Address" />
                     </div>
                     <div className="checkbox">
@@ -54,17 +54,17 @@ const HomeLoggedIn = React.createClass({
                 <div className="col-xs-6">
                   <div className="well well-lg">
                     <div className="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
+                      <label>Email address</label>
                       <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" form="form1" />
                     </div>
                     <div className="form-group">
-                      <label for="exampleInputPassword1">Password</label>
+                      <label>Password</label>
                       <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" form="form1" />
                     </div>
                   </div>
                   <form className="well well-lg">
                     <div className="form-group">
-                      <label for="exampleInputFile">File input</label>
+                      <label>File input</label>
                       <input type="file" id="exampleInputFile" />
                       <p className="help-block">Example block-level help text here.</p>
                     </div>

@@ -43,81 +43,138 @@ const TopicPage = React.createClass({
     );
 
     return(
-      <div>
-        <h1>Topics</h1>
-        <div className="row new-btn-row">
           <div className="container">
-            { (sessionStorage.getItem('role') === 'company_agent') &&
-            <Link to="/create-topic" className="btn btn-success">Create new topic</Link>
-            }
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4 col-md-offset-4">
-            <input type="text" className="form-control" placeholder="Search topics by title (programing language)..."
-                   value={this.state.search}
-                   onChange={this.updateSearch}/>
-          </div>
-        </div>
-
-        <div className="row">
-          <h4>Available Topics</h4>
-          <div className="topics col-md-10 col-md-offset-1 topic-wrap">
-            <table className="table table-hover table-striped">
-              <thead className="">
+    <div className="col-md-12">
+      <br/>
+      <h4 className="quy-panel-title">Approve Plan</h4>
+      <hr/>
+      <div className="panel">
+        <div className="panel-body quy-panel-body">
+          <table className="table table-hover">
+            <thead>
               <tr>
-                <th>Topic title</th>
-                <th>Description</th>
-                <th>Company Name</th>
-                <th>Max No.interns</th>
-                <th>No. registered</th>
-                <th>Actions</th>
+                <th className="text-center">ID</th>
+                <th className="text-center">Part</th>
+                <th className="text-center">Employee</th>
+                <th className="text-center">Time</th>
+                <th className="text-center">Place</th>
+                <th className="text-center">Estimated Cost</th>
+                <th className="text-center">Detail</th>
+          <th>Action</th>
               </tr>
-              </thead>
-              <tbody>
-              {filteredTopics.length !== 0 ?
-                filteredTopics.map((topic, i) =>
-                  <tr key={i}>
-                    <td><Link to={`/topic/${topic.topic_id}`}>{topic.title}</Link></td>
-                    <td>{(topic.description.length > 20) ?
-                      topic.description.slice(0, 20) + "..." :
-                      topic.description}</td>
-                    <td>{topic.company_name}</td>
-                    <td>{topic.max}</td>
-                    <td>{topic.no_intern}</td>
-                    {((role === 'student') || (role === 'teacher_manager')) ?
-                      <td>
-                        {(role === 'student') &&
-                        <input type="button" className="btn btn-success reg-btn" value="Register"
-                           onClick={this.handleRegister.bind(this, topic.topic_id)}/>
-                        }
-                        {(role === 'teacher_manager') &&
-                        <input type="button" className="btn btn-primary reg-btn" value="Approve"/>
-                        }
-                      </td> :
-                      <td>
-                        <p>Not authorized</p>
-                      </td>
-                    }
-                  </tr>
-                ) : <tr>Nothing found</tr>
-              }
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <hr/>
-        <div className="row">
-          <h4>Registered Topics</h4>
-          <div className="registered-topics col-md-10 col-md-offset-1">
-            {this.props.registered_topics.length !== 0 ?
-              this.props.registered_topics.map((registered_topic, i) =>
-                <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
-              <div>You haven't registered any topic yet :( </div>
-            }
-          </div>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row quy-button" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok"></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject"></span>
+                </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row quy-button" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row quy-button" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                </div>
+                </td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row quy-button" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                </div>
+                </td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                  </div>
+                </td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row quy-button" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                  </div>
+                </td>
+              </tr>
+               <tr>
+                <td>1</td>
+                <td>Doing Sth</td>
+                <td>1 Week</td>
+                <td>Ha Noi</td>
+                <td>Room 6</td>
+                <td>Nguyen Van Quy</td>
+                <td>Doing something</td>
+                <td>
+                  <div className="row quy-button" >
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                    <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
         </div>
       </div>
+    </div>
+  </div>
     );
   }
 });
