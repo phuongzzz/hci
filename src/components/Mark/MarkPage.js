@@ -1,6 +1,6 @@
 import React from 'react';
 import './mark-page.css';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 
 // import { printJS } from 'print.js/';
 
@@ -14,7 +14,7 @@ const MarkPage = React.createClass({
   },
 
   updateSearch(event) {
-    this.setState({search: event.target.value});
+    this.setState({ search: event.target.value });
   },
 
   handleClick(e) {
@@ -23,7 +23,7 @@ const MarkPage = React.createClass({
     // printJS('docs/printjs.pdf');
   },
 
-  render(){
+  render() {
     let filteredMarks = this.props.marks.filter(
       (mark) => {
         return mark.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
@@ -31,66 +31,158 @@ const MarkPage = React.createClass({
     );
 
     return (
-      <div className="row">
-        <div className="col-md-10 col-md-offset-1">
-          <h4>Result Internships</h4>
-          <div className="row">
-            <div className="col-md-4 col-md-offset-4">
-              <input type="text" className="form-control" placeholder="Search by username..."
-                     value={this.state.search}
-                     onChange={this.updateSearch}/>
-            </div>
-          </div>
-          <div className="table-wrap">
-            {filteredMarks.length !== 0 ?
-              <table className="table mark-table table-hover">
-                <thead className="thead-mark">
-                <tr>
-                  <th className="text-center">TopicID</th>
-                  <th className="text-center">Student</th>
-                  <th className="text-center">Class</th>
-                  <th className="text-center">CompanyRate</th>
-                  <th className="text-center">Timechecking</th>
-                  <th className="text-center">Report</th>
-                  <th className="text-center">Demo</th>
-                  <th className="text-center">Material</th>
-                  <th className="text-center">GPA</th>
-                  <th className="text-center">Result</th>
-                </tr>
+      <div className="container">
+        <div className="col-md-12">
+          <br />
+          <h4 className="quy-panel-title" >Payment Check and Approve</h4>
+          <hr />
+          <div className="panel">
+            <div className="panel-body quy-panel-body">
+              <table className="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Part</th>
+                    <th>Employee</th>
+                    <th>Bank Account</th>
+                    <th>Business Trip</th>
+                    <th>Payment Content</th>
+                    <th>Amount</th>
+                    <th>File Include</th>
+                    <th>Action</th>
+                  </tr>
                 </thead>
                 <tbody>
-                {filteredMarks.map((mark, i) =>
-                  <tr key={i}>
-                    {((sessionStorage.getItem('role') === 'teacher_manager') ||
-                    (sessionStorage.getItem('role') === 'teacher_instructor')) ?
-                      <td><Link to={`/mark/${mark.id}`}>{mark.id}</Link></td> :
-                      <td>{mark.id}</td>
-                    }
-                    <td>{mark.name}</td>
-                    <td>{mark.class}</td>
-                    <td>{mark.CSTT}</td>
-                    <td>{mark.timechecking}</td>
-                    <td>{mark.report}</td>
-                    <td>{mark.demo}</td>
-                    <td>{mark.material}</td>
-                    <td>{mark.GPA}</td>
-                    <td>{mark.Result}</td>
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE........</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
                   </tr>
-                )}
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Room 6</td>
+                    <td>Nguyen Van Quy</td>
+                    <td>01287144074</td>
+                    <td>Room 6</td>
+                    <td>Need an limited credit card</td>
+                    <td>Infinity</td>
+                    <td>
+                      <p>http://drive.google.com/SIE12A</p>
+                      <p>http://dropbox.com/SIE</p></td>
+                    <td>
+                      <div className="row quy-button" >
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
-              </table> :
-              <div className="row">
-                <div className="col-md-6 col-md-offset-3">
-                  <div className="mark-search-error">Sorry, but we can't find any marks for <b>"{this.state.search}"</b></div>
-                </div>
-              </div>
-            }
+              </table>
+            </div>
           </div>
-          {/*<button type="button" onClick="printJS('docs/printjs.pdf')">Export</button>*/}
-          {
-            filteredMarks.length !== 0 &&
-            <button type="button" className="btn btn-success btn-lg" onClick={this.handleClick}>Export</button>
-          }
         </div>
       </div>
     );
