@@ -76,12 +76,12 @@ const NavigationBar = React.createClass({
                 </ul>
               </li>
               <li className="dropdown">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Payments<b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
                 <ul className="dropdown-menu">
-                  <li><Link to="/reports">Reports</Link></li>
-                  <li> < Link to="/marks">Marks</Link></li>
-                  <li><Link to="/assigns">Assigns</Link></li>
+                  <li><Link to="/reports">Request Payments</Link></li>
+                  <li> < Link to="/marks">List Request Payments</Link></li>
+                  <li><Link to="/assigns">Online Banking</Link></li>
                 </ul>
               </li>
               <li><Link to="/respondings">Advanced Request</Link></li>

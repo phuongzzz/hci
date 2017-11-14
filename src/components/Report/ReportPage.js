@@ -55,66 +55,63 @@ const ReportPage = React.createClass({
     );
 
     return (
-      <div className="row">
-        <div className="col-md-10 col-md-offset-1">
-          <h4>List Reports</h4>
-          <div className="row">
-            <div className="col-md-4 col-md-offset-4">
-              {sessionStorage.getItem('role') === 'student' &&
-                <button onClick={this.onClick} className="btn btn-success">Add new report</button>
-              }
-              <input type="text" className="form-control phuong-inline-input" placeholder="Search by username..."
-                     value={this.state.search}
-                     onChange={this.updateSearch}/>
-            </div>
-          </div>
-          {
-            this.state.showResponse &&
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2 phuong-left-align">
-                <form ref="addNewResponseForm" className="form-group" onSubmit={this.handleSubmit}>
-                  <input type="text" ref="class_name" hidden value="Test" readOnly/>
-                  <label>Student's name</label>
-                  <input type="text" ref="name" placeholder="Enter your name"
-                         className="form-control"/>
-                  <label>Link Report</label>
-                  <input type="text" ref="link" placeholder="Enter your report link"
-                         className="form-control"/>
-                  <div className="phuong-btn-group">
-                    <input type="submit" className="btn btn-success" value="Save"/>
-                    <button className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
+      <div className="container">
+        <h4 className="text-center">Payment Request</h4>
+              <div className="row">
+        <div className="col-md-8 col-md-offset-2">
+              <div className="row">
+                <div className="col-xs-6">
+                  <form id="form1" className="well well-lg">
+                    <div className="form-group">
+                      <label>Dear</label>
+                      <input type="name" className="form-control" id="exampleInputName" placeholder="" />
+                    </div>
+                    <div className="form-group">
+                      <label>Full Name</label>
+                      <input type="lastname" className="form-control" id="exampleInputLastName" placeholder="Full Name" />
+                    </div>
+                    <div className="form-group">
+                      <label>Department</label>
+                      <input type="phone" className="form-control" id="exampleInputPhone" placeholder="Department" />
+                    </div>
+                    <div className="form-group">
+                      <label>Payment's description</label>
+                      <input type="addr" className="form-control" id="exampleInputAddr" placeholder="Payment's description" />
+                    </div>
+                  </form>
+                </div>
+                <div className="col-xs-6">
+                  <div className="well well-lg">
+                    <div className="form-group">
+                      <label>Quanity</label>
+                      <input type="text" className="form-control" id="exampleInputEmail1" placeholder="Quanity" form="form1" />
+                    </div>
+                    <div className="form-group">
+                      <label>Card Number</label>
+                      <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Card Number" form="form1" />
+                    </div>
                   </div>
-                </form>
+                  <form className="well well-lg">
+                    <div className="form-group">
+                      <label>Required Documents</label>
+                      <input type="file" id="exampleInputFile" />
+                      <p className="help-block">Upload your required files here.</p>
+                    </div>
+                    <div className="checkbox">
+                      <label>
+                        <input type="checkbox" />Choose many files
+                      </label>
+                    </div>
+                  </form>
+                  <div className="well well-sm">
+                    <button type="submit" className="btn btn-success" form="form2">Submit Your Request</button>
+                  </div>
+                </div>
               </div>
             </div>
-          }
-          {filteredReports.length !== 0 ?
-            <table className="table report-table table-hover">
-              <thead className="thead-report">
-              <tr>
-                <th className="text-center">ID</th>
-                <th className="text-center">Mssv</th>
-                <th className="text-center">Student</th>
-                <th className="text-center">Link Report</th>
-                <th className="text-center">Comment</th>
-              </tr>
-              </thead>
-              <tbody>
-              {filteredReports.map((report, i) =>
-                <tr key={i}>
-                  <td><Link to={`/report/${report.id}`}>{report.id}</Link></td>
-                  <td>{report.student_id}</td>
-                  <td>{report.name}</td>
-                  <td>{report.link}</td>
-                  <td>{report.comment}</td>
-                </tr>
-              )}
-              </tbody>
-            </table> :
-            <div className="report-search-error mark-search-error">Sorry but....we can't find <b>"{this.state.search}"</b> :( </div>
-          }
-        </div>
       </div>
+      </div>
+
 
     )
   }
