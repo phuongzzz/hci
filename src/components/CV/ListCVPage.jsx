@@ -7,9 +7,10 @@ const ListCVPage = React.createClass({
   render() {
     return (
       <div className="container">
+      <h3 className="text-left">New Plan Request</h3>
         <div className="row">
           <div className="col-md-6">
-            <h4 className="cuong-panel-title text-left">User Info</h4>
+            <h6 className="cuong-panel-title text-left">User Info</h6>
             <div className="profile-right cuong-user-info">
               <div className="panel">
                 <div className="panel-body">
@@ -63,7 +64,7 @@ const ListCVPage = React.createClass({
           </div>
 
           <div className="col-md-6">
-            <h4 className="cuong-panel-title text-left">Business Trip Info</h4>
+            <h6 className="cuong-panel-title text-left">Business Trip Info</h6>
             <div className="profile-right cuong-business-trip-info">
               <div className="panel">
                 <div className="panel-body">
@@ -104,7 +105,7 @@ const ListCVPage = React.createClass({
 
         <div className="row">
           <div className="col-md-12">
-            <h4 className="cuong-panel-title text-left">Business Trip Details</h4>
+            <h6 className="cuong-panel-title text-left">Business Trip Details</h6>
             <div className="panel">
               <div className="panel-body">
                 <table className="table table-hover">

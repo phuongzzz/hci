@@ -37,7 +37,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><Link to="/notifications">Notifications</Link></li>
+              <li><Link to="/">Profile</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -65,14 +65,14 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><Link to="/notifications">Notifications</Link></li>
+              <li><Link to="/">Profile</Link></li>
               <li className="dropdown">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Plan<b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
                 <ul className="dropdown-menu">
-                  <li><Link to="/topics">Register Topic</Link></li>
+                  <li><Link to="/topics">Approve Plan</Link></li>
                   <li className="divider"></li>
-                  <li><Link to="/schedule">Internship Schedule</Link></li>
+                  <li><Link to="/schedule">Plan's Schedule</Link></li>
                 </ul>
               </li>
               <li className="dropdown">
@@ -84,9 +84,8 @@ const NavigationBar = React.createClass({
                   <li><Link to="/assigns">Assigns</Link></li>
                 </ul>
               </li>
-              <li><Link to="/listcv">List CV</Link></li>
-              <li><Link to="/respondings">Forum</Link></li>
-              <li><Link to="/status-internships">Internship Status</Link></li>
+              <li><Link to="/respondings">Advanced Request</Link></li>
+              <li><Link to="/listcv">New Plan Request</Link></li>
             </ul>
             <button className="btn btn-danger navbar-right log-btn"
               onClick={this.handleLogout}>Logout, {name}</button>

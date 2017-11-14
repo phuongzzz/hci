@@ -16,8 +16,8 @@ const HomeLoggedIn = React.createClass({
               <div className="phuong-card">
                 <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
                 <div className="container">
-                  <h4><b>John Doe</b></h4>
-                  <p>Architect & Engineer</p>
+                  <h4><b>phuongzzz</b></h4>
+                  <p>Software Engineer</p>
                 </div>
               </div>
             </div>
