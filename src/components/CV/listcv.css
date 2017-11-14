@@ -1,4 +1,26 @@
-.cv_row{
+.cuong-body{
+  background-color: #F8F8F8;
+}
+
+#cuong-plan-name{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cuong-user-info{
+  border-right: solid 1px #F0F0F0;
+}
+
+.cuong-input-box{
+  width: 100%;
+}
+
+.cuong-trip-content{
+  height: 101px;
+  width: 100%;
+}
+
+/* .cv_row{
   margin-bottom: 10px !important;
 }
 
@@ -47,4 +69,4 @@
 
 .add-cv-btn{
   float: left;
-}
+} */

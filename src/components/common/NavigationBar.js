@@ -13,7 +13,7 @@ const NavigationBar = React.createClass({
     var role = sessionStorage.getItem('role');
     if (role === null) {
       return (
-        <nav className="navbar navbar-embossed navbar-fixed-top" role="navigation">
+        <nav className="navbar navbar-embossed navbar-fixed-top phuong-navbar" role="navigation">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span className="sr-only">Toggle navigation</span>

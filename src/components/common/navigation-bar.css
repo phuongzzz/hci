@@ -9,3 +9,19 @@
 .log-btn {
   margin-top: 6px;
 }
+
+.phuong-navbar {
+  background-color: white;
+}
+
+.phuong-select {
+  background-color: #16a085;
+}
+/*
+.phuong-select a {
+  color: white;
+}*/
+
+.dropdown-menu > li > a {
+  color: white;
+}
