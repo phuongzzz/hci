@@ -106,6 +106,7 @@ const ReportPage = React.createClass({
                   &nbsp; &nbsp;
                   <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
                 </div>
+                  <div className="clearfix"></div>
                 </form>
               </div>
             </div>
