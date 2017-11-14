@@ -1,4 +1,4 @@
-.user-grid {
+/*.user-grid {
   text-align: left;
   padding-top: 30px;
 }
@@ -9,4 +9,71 @@
 
 .phuong-flex {
   display: flex;
+}*/
+
+.phuong-td {
+  width: 20%;
+}
+
+.cuong-user-list tbody td > img {
+    position: relative;
+    max-width: 50px;
+    float: left;
+    margin-right: 15px;
+}
+
+.cuong-user-list thead > tr > th {
+    border-bottom: 1px solid #C2C2C2;
+    padding-bottom: 0;
+}
+
+.cuong-user-list tbody > tr > td {
+    font-size: 0.875em;
+    background: #f5f5f5;
+    border-top: 10px solid #fff;
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+.cuong-user-list tbody > tr > td:first-child, .cuong-user-list thead > tr > th:first-child {
+    padding-left: 20px;
+}
+.cuong-user-list tbody td .user-link {
+    display: block;
+    font-size: 1.25em;
+    padding-top: 3px;
+    margin-left: 60px;
+}
+
+.cuong-user-list tbody td .user-subhead {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+.cuong-user-list tbody > tr > td {
+    font-size: 0.875em;
+    background: #f5f5f5;
+    border-top: 10px solid #fff;
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+
+.cuong-danger > span > i{
+  /*color: #fe635f !important;*/
+}
+
+i.fa-pencil, i.fa-trash-o, i.fa-search-plus {
+  border-radius: 6px;
+  /*margin-left: 40px;*/
+}
+
+i.fa-trash-o {
+  background-color: #fe635f;
+}
+
+i.fa-pencil {
+  background-color: #19a;
+}
+
+i.fa-search-plus {
+  background-color: #2ecc6a;
 }
