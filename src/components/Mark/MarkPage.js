@@ -1,6 +1,8 @@
 import React from 'react';
 import './mark-page.css';
 import { Link } from 'react-router';
+import  toastr from 'toastr';
+import _ from 'lodash';
 
 // import { printJS } from 'print.js/';
 
@@ -15,6 +17,16 @@ const MarkPage = React.createClass({
 
   updateSearch(event) {
     this.setState({ search: event.target.value });
+  },
+
+  handleCancel(e) {
+    e.preventDefault();
+    if(confirm("Are you sure?")) {
+      // hashHistory.push("/");
+      toastr.warning("Deleted successfuly");
+    } else {
+      toastr.success("You cancled");
+    }
   },
 
   handleClick(e) {
@@ -41,141 +53,141 @@ const MarkPage = React.createClass({
               <table className="table table-hover">
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Part</th>
-                    <th>Employee</th>
-                    <th>Bank Account</th>
-                    <th>Business Trip</th>
-                    <th>Payment Content</th>
-                    <th>Amount</th>
-                    <th>File Include</th>
-                    <th>Action</th>
+                    <th className="text-left">ID</th>
+                    <th className="text-left">Part</th>
+                    <th className="text-left">Employee</th>
+                    <th className="text-left">Bank Account</th>
+                    <th className="text-left">Business Trip</th>
+                    <th className="text-left">Payment Content</th>
+                    <th className="text-left">Amount</th>
+                    <th className="text-left">File Include</th>
+                    <th className="text-left">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
-                    <td>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
+                    <td className="text-left">
                       <p>http://drive.google.com/SIE12A</p>
                       <p>http://dropbox.com/SIE........</p></td>
-                    <td>
+                    <td className="text-left">
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok"></Link>
+                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject"  onClick={this.handleCancel}  ></span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
-                    <td>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
+                    <td className="text-left">
                       <p>http://drive.google.com/SIE12A</p>
                       <p>http://dropbox.com/SIE</p></td>
-                    <td>
+                    <td className="text-left">
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
+                        <span  onClick={this.handleCancel}  className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
-                    <td>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
+                    <td className="text-left">
                       <p>http://drive.google.com/SIE12A</p>
                       <p>http://dropbox.com/SIE</p></td>
-                    <td>
+                    <td className="text-left">
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
+                        <span   onClick={this.handleCancel}  className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
-                    <td>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
+                    <td className="text-left">
                       <p>http://drive.google.com/SIE12A</p>
                       <p>http://dropbox.com/SIE</p></td>
-                    <td>
+                    <td className="text-left">
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
+                        <span  onClick={this.handleCancel}  className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
                     <td>
-                      <p>http://drive.google.com/SIE12A</p>
-                      <p>http://dropbox.com/SIE</p></td>
+                      <p className="text-left">http://drive.google.com/SIE12A</p>
+                      <p className="text-left">http://dropbox.com/SIE</p></td>
                     <td>
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
+                        <span  onClick={this.handleCancel}  className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
-                    <td>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
+                    <td className="text-left">
                       <p>http://drive.google.com/SIE12A</p>
                       <p>http://dropbox.com/SIE</p></td>
-                    <td>
+                    <td className="text-left">
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
+                        <span  onClick={this.handleCancel}  className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>1</td>
-                    <td>Room 6</td>
-                    <td>Nguyen Van Quy</td>
-                    <td>01287144074</td>
-                    <td>Room 6</td>
-                    <td>Need an limited credit card</td>
-                    <td>Infinity</td>
-                    <td>
-                      <p>http://drive.google.com/SIE12A</p>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Nguyen Van Quy</td>
+                    <td className="text-left">01287144074</td>
+                    <td className="text-left">Room 6</td>
+                    <td className="text-left">Need an limited credit card</td>
+                    <td className="text-left">Infinity</td>
+                    <td className="text-left link-driver">
+                      <p><i>http://drive.google.com/SIE12A</i></p>
                       <p>http://dropbox.com/SIE</p></td>
-                    <td>
+                    <td className="text-left">
                       <div className="row quy-button" >
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></span>
-                        <span className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
+                        <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
+                        <span  onClick={this.handleCancel} className="col-md-2 col-md-offset-2 glyphicon glyphicon-trash mai_reject" ></span>
                       </div>
                     </td>
                   </tr>

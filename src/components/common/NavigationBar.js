@@ -66,6 +66,7 @@ const NavigationBar = React.createClass({
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
               <li><Link to="/">Profile</Link></li>
+              <li><Link to="/company/:companyName">Plan List</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Plan<b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -87,8 +88,18 @@ const NavigationBar = React.createClass({
               <li><Link to="/respondings">Advanced Request</Link></li>
               <li><Link to="/listcv">New Plan Request</Link></li>
             </ul>
-            <button className="btn btn-danger navbar-right log-btn"
-              onClick={this.handleLogout}>Logout, {name}</button>
+            <li className="dropdown navbar-right log-btn">
+              <a href="#" className="dropdown-toggle" data-toggle="dropdown">{name}<b className="caret"></b></a>
+              <span className="dropdown-arrow"></span>
+              <ul className="dropdown-menu mai-dropdow">
+                <li>
+                  <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                    Logout
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
           </div>
         </nav>
       );
