@@ -74,7 +74,14 @@ const ReportPage = React.createClass({
                     </div>
                     <div className="form-group">
                       <label>Department (*)</label>
-                      <input required type="phone" className="form-control" id="exampleInputPhone" placeholder="Department" />
+                      <select className="form-control" id="inputState">
+                        <option selected="selected">IT</option>
+                        <option selected="selected">Marketing</option>
+                        <option selected="selected">Hr</option>
+                        <option selected="selected">Design</option>
+                        <option selected="selected">Development</option>
+                        <option>...</option>
+                      </select>
                     </div>
                     <div className="form-group">
                       <label>Payment's description</label>
@@ -102,7 +109,7 @@ const ReportPage = React.createClass({
                         <input type="checkbox" />Choose many files
                       </label>
                     </div>
-                      <button type="submit" className="btn btn-success">Submit Your Request</button>
+                  <Link to="/marks" className="btn btn-success">Submit Your Request</Link>
                   &nbsp; &nbsp;
                   <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
                 </div>

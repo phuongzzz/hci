@@ -22,22 +22,23 @@ const HomeLoggedIn = React.createClass({
     // console.log(currentUser.username);
     return (
       <div className="phuong-profile-wrapper container-fluid">
-        <h6 className="edit-profile-title">Edit Profile</h6>
         <div className="edit-content-wrapper">
+          <br/>
           <div className="row">
             <div className="col-md-4">
+              <br/><br/>
               <div className="phuong-card">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
                 <div className="container">
-                  <h4><b>phuongzzz</b></h4>
-                  <p>Software Engineer</p>
+                  <h4><b className="text-center"> &nbsp; &nbsp; &nbsp; &nbsp;phuongzzz</b></h4>
+                  <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Software Engineer</p>
                 </div>
               </div>
             </div>
             <div className="col-md-8">
               <div className="row">
                 <div className="col-xs-6">
-                  <form id="form1" className="well well-lg">
+                  <form id="form1" className="well well-lg profile-border">
                     <div className="form-group">
                       <label>First Name (*)</label>
                       <input required type="name" className="form-control" id="exampleInputName" placeholder="First Name" />
@@ -54,20 +55,16 @@ const HomeLoggedIn = React.createClass({
                       <label>Address (*)</label>
                       <input required type="addr" className="form-control" id="exampleInputAddr" placeholder="Address" />
                     </div>
-                    <div className="checkbox">
-                      <label>
-                        <input type="checkbox" /> Check me out
-                      </label>
-                    </div>
+                    {/*<div className="checkbox">*/}
+                      {/*<label>*/}
+                        {/*<input type="checkbox" /> Check me out*/}
+                      {/*</label>*/}
+                    {/*</div>*/}
                   </form>
-                  <div className="well well-sm">
-                    <button type="submit" className="btn btn-success" form="form1">Submit</button>
-                    &nbsp; &nbsp; &nbsp;
-                    <button type="" className="btn btn-danger" onClick={this.handleCancel} form="form1">Cancel</button>
-                  </div>
+
                 </div>
                 <div className="col-xs-6">
-                  <div className="well well-lg">
+                  <div className="well well-lg profile-border">
                     <div className="form-group">
                       <label>Email address (*)</label>
                       <input required type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" form="form1" />
@@ -77,21 +74,25 @@ const HomeLoggedIn = React.createClass({
                       <input required type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" form="form1" />
                     </div>
                   </div>
-                  <form className="well well-lg">
+                  <form className="well well-lg profile-border">
                     <div className="form-group">
                       <label>File input</label>
                       <input type="file" id="exampleInputFile" />
                       <p className="help-block">Example block-level help text here.</p>
                     </div>
-                    <div className="checkbox">
-                      <label>
-                        <input type="checkbox" /> Check me out
-                      </label>
-                    </div>
+                    {/*<div className="checkbox">*/}
+                      {/*<label>*/}
+                        {/*<input type="checkbox" /> Check me out*/}
+                      {/*</label>*/}
+                    {/*</div>*/}
                   </form>
-                  <div className="well well-sm">
-                    {/*<button type="submit" className="btn btn-success" form="form2">Submit Form#2</button>*/}
+                  <div className="well well-sm profile-border">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+                    <button type="submit" className="btn btn-success" form="form1">Submit</button>
+                    &nbsp; &nbsp; &nbsp;
+                    <button type="" className="btn btn-danger" onClick={this.handleCancel} form="form1">Cancel</button>
                   </div>
+
                 </div>
               </div>
             </div>

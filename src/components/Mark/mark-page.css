@@ -3,12 +3,23 @@
   border: 2px solid #B2DFDB;
   border-radius: 2px;
 }
+.icon-delete {
+  padding-top: 10px;
+}
 .thead-mark{
   background-color:#B2DFDB;
 }
 .table-wrap {
   height: 400px;
   overflow-y: scroll;
+}
+
+.link-driver {
+  color: #2a6496;
+}
+
+.mai_reject {
+  margin-top: 15px;
 }
 
 .table-wrap::-webkit-scrollbar {

@@ -20,72 +20,65 @@ const AssignPage = React.createClass({
     return(
       <div className="row">
         <form action="">
-          <div className="col-md-6 cuong-payment-user">
-            <h3>Payment User Infomation</h3>
+          <br/>
+          <div className="col-md-7 col-md-push-1 cuong-payment-user">
+            <br/><br/>
+            <h4 className="text-left">&nbsp;&nbsp;&nbsp; &nbsp;Payment User Infomation</h4>
             <div className="panel">
               <div className="panel-body">
                 <div className="row">
-                  <div className="col-md-3">Name</div>
-                  <div className="col-md-9"><input type="text" className="form-control" placeholder="Input your name here..."/></div>
+                  <div className="col-md-2">Name</div>
+                  <div className="col-md-7"><input type="text" className="form-control" placeholder="Nguyen Van Quy"/></div>
                 </div>
                 <hr/>
                 <div className="row">
-                  <div className="col-md-3">Phone</div>
-                  <div className="col-md-9"><input type="text" className="form-control" placeholder="Input your phone number here..."/></div>
+                  <div className="col-md-2">Bank Account</div>
+                  <div className="col-md-7"><input type="text" className="form-control" placeholder="01287144074"/></div>
                 </div>
+
                 <hr/>
                 <div className="row">
-                  <div className="col-md-3">Email</div>
-                  <div className="col-md-9"><input type="text" className="form-control" placeholder="Input your email here..."/></div>
+                  <div className="col-md-2">Payment Message</div>
+                  <div className="col-md-7"><textarea type="text" className="form-control" placeholder="Input payment message here..."/></div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-success">Submit</button> &nbsp; &nbsp; &nbsp;
+            <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
+          </div>
+          <div className="col-md-4">
+            <div className="panel">
+              <div className="panel-body">
+                <p className="text-left"><b>User Info</b></p>
+                <div className="row">
+                  <div className="col-md-2">Name</div>
+                  <div className="col-md-6">Nguyen Van Quy</div>
+                </div>
+                <br/>
+                <div className="row">
+                  <div className="col-md-2">Email</div>
+                  <div className="col-md-6">quynguyen2201@gmail.com</div>
+                </div>
+                <br/>
+                <div className="row">
+                  <div className="col-md-2">Phone</div>
+                  <div className="col-md-6">01287144074</div>
                 </div>
                 <hr/>
+                <p className="text-left"><b>Payment Info</b></p>
                 <div className="row">
-                  <div className="col-md-3">Address</div>
-                  <div className="col-md-9"><input type="text" className="form-control" placeholder="Input your address here..."/></div>
+                  <div className="col-md-2">Business Trip</div>
+                  <div className="col-md-6">Hs Noi Business</div>
                 </div>
-                <hr/>
+                <br/>
                 <div className="row">
-                  <div className="col-md-3">Payment Message</div>
-                  <div className="col-md-9"><textarea type="text" className="form-control" placeholder="Input payment message here..."/></div>
+                  <div className="col-md-2">Amount of Money</div>
+                  <div className="col-md-6">30.000.000d</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <h3>Receive Infomation</h3>
-            <div className="panel">
-              <div className="panel-body">
-                <h4 className="text-left">USER INFO</h4>
-                <div className="row">
-                  <div className="col-md-3">Name</div>
-                  <div className="col-md-9">Nguyen Van Quy</div>
-                </div>
-                <br/>
-                <div className="row">
-                  <div className="col-md-3">Email</div>
-                  <div className="col-md-9">quynguyen2201@gmail.com</div>
-                </div>
-                <br/>
-                <div className="row">
-                  <div className="col-md-3">Phone</div>
-                  <div className="col-md-9">01287144074</div>
-                </div>
-                <hr/>
-                <h4 className="text-left">PAYMENT INFO</h4>
-                <div className="row">
-                  <div className="col-md-3">Business Trip</div>
-                  <div className="col-md-9">Hs Noi Business</div>
-                </div>
-                <br/>
-                <div className="row">
-                  <div className="col-md-3">Amount of Money</div>
-                  <div className="col-md-9">30.000.000d</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button type="submit" className="btn btn-success">Submit</button>
-          <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
+
         </form>
       </div>
     );
