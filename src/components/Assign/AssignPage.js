@@ -23,7 +23,9 @@ const AssignPage = React.createClass({
           <br/>
           <div className="col-md-7 col-md-push-1 cuong-payment-user">
             <br/><br/>
-            <h4 className="text-left">&nbsp;&nbsp;&nbsp; &nbsp;Payment User Infomation</h4>
+            <h4 className="text-left">&nbsp;&nbsp;&nbsp; &nbsp;
+              <span className="fa fa-user">&nbsp;</span>
+              Payment User Infomation</h4>
             <div className="panel">
               <div className="panel-body">
                 <div className="row">

@@ -46,12 +46,14 @@ const MarkPage = React.createClass({
       <div className="container">
         <div className="col-md-12">
           <br />
-          <h4 className="quy-panel-title" >Payment Check and Approve</h4>
+          <h4 className="quy-panel-title text-left" >
+            <span className="fa fa-credit-card"></span> &nbsp;
+            Payment Check and Approve</h4>
           <hr />
           <div className="panel">
             <div className="panel-body quy-panel-body">
               <table className="table table-hover">
-                <thead>
+                <thead className="content-company">
                   <tr>
                     <th className="text-left">ID</th>
                     <th className="text-left">Part</th>
@@ -110,8 +112,8 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left">
-                      <p>http://drive.google.com/SIE12A</p>
-                      <p>http://dropbox.com/SIE</p></td>
+                      <a href="http://drive.google.com/SIE12A">http://drive.google.com/SIE12A</a>
+                      <a href="http://dropbox.com/SIE<">http://dropbox.com/SIE</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>

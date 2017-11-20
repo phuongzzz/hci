@@ -7,6 +7,50 @@
 .mai-head {
   
 }
+.mai-note {
+  color: red;
+  font-size: 13px;
+  text-align: right;
+}
+.mai-plus{
+  color: #1abc9c;
+}
+.content-company {
+  background-attachment: scroll;
+  background-repeat: repeat-x;
+  background-color: #3b4658;
+  color: #fff;
+  text-align: left;
+  border-radius: .3rem;
+  height: 40px;
+  padding-left: 7px;
+}
+.mai-input {
+  width: 500px;
+}
+
+.mai-border {
+  border: outset;
+  border-radius: 3%;
+}
+
+.regulation {
+  font-size: 12px;
+}
+.money-color {
+  color: red;
+  font-size: 10px;
+  margin: 0;
+  margin-top: 7px;
+}
+
+.hr {
+  border: outset;
+}
+
+.total-color {
+  color: red;
+}
 /*.table-fixed thead {
     width: 97%;
 }*/

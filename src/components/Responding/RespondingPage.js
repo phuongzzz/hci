@@ -23,7 +23,7 @@ const RespondingPage = React.createClass({
     <br/>
     <h4 className="quy-panel-title">APPLICATION FOR ADVANCE</h4>
     <hr/>
-    <div className="row col-md-8 col-md-offset-2">
+    <div className="row col-md-6 col-md-offset-3">
       <form action="" className="form-group">
       <div className="row quy-date">
         <div className="col-md-1 col-md-offset-6">Time</div>
@@ -38,43 +38,53 @@ const RespondingPage = React.createClass({
                 <ul className="list-unstyled task-list">
                     <li>
                       <div className="row">
-                          <div className="col-md-2 col-md-offset-2"><span>Dear: (*)</span></div>
-                          <div className="col-md-7"><span><input required type="text" className="form-control" placeholder="Enter Name Here.."/></span></div>
+                          <div ><span>Dear: (*)</span></div>
+                          <div> <span><input required type="text" className="form-control mai-input" placeholder="Enter Name Here.."/></span></div>
                       </div>
                     </li>
                     <hr/>
                     <li>
                       <div className="row">
-                          <div className="col-md-2 col-md-offset-2"><span>Full Name: (*)</span></div>
-                          <div className="col-md-7"><span><input required type="text" className="form-control" placeholder="Enter Your Full Name Here..."/></span></div>
+                          <div><span>Full Name: (*)</span></div>
+                          <div><span><input required type="text" className="form-control mai-input" placeholder="Enter Your Full Name Here..."/></span></div>
                       </div>
                     </li>
                     <hr/>
                     <li>
                       <div className="row">
-                          <div className="col-md-2 col-md-offset-2"><span>Department: (*)</span></div>
-                          <div className="col-md-7"><span><input required type="text" className="form-control" placeholder="Enter Your Department Here.."/></span></div>
+                          <div ><span>Department: (*)</span></div>
+                          <div className="dropdown">
+                            <select class="form-control" id="mai-select">
+                              <option>IT</option>
+                              <option>Hr</option>
+                              <option>Marketing</option>
+                              <option>Design</option>
+                              <option>Management</option>
+                              <option value="Other">others</option>
+                            </select>
+                        </div>
                       </div>
                     </li>
                     <hr/>
                     <li>
                     <div className="row">
-                      <div className="col-md-2 col-md-offset-2"><span>Estimate Cost (*)</span></div>
-                      <div className="col-md-7"><span><input required type="text" className="form-control" placeholder="Enter number cost..."/></span></div>
+                      <div ><span>Estimate Cost (*)</span></div>
+                      <div ><span><input required type="number" className="form-control mai-input" placeholder="Enter number cost..."/></span></div>
                     </div>
                     </li>
                     <hr/>
                     <li>
                     <div className="row">
-                      <div className="col-md-2 col-md-offset-2"><span>Reason for advance: (*)</span></div>
-                      <div className="col-md-7"><span><textarea required type="text" className="form-control" placeholder="Enter Your Bank Account Here..."></textarea></span></div>
+                      <div ><span>Reason for advance: (*)</span></div>
+                      <div ><span><textarea required type="text" className="form-control mai-input" placeholder="Enter Your Bank Account Here..."></textarea></span></div>
+                      <Link to="#/classe/:className"><span className="dutoan"><i><u>Detailed cost estimates</u></i></span></Link>
                     </div>
                     </li>
                     <hr/>
                     <li>
                     <div className="row">
-                      <div className="col-md-2 col-md-offset-2"><span>Billing Period (*)</span></div>
-                      <div className="col-md-7"><span><input type="text" required className="form-control" placeholder="Enter time..."/></span></div>
+                      <div ><span>Billing Period (*)</span></div>
+                      <div ><span><input type="date" required className="form-control mai-input" placeholder="Enter time..."/></span></div>
                     </div>
                     </li>
                 </ul>

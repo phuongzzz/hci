@@ -1,53 +1,85 @@
 import React from 'react';
 import './mark-page.css';
-import { hashHistory } from 'react-router';
+import {hashHistory} from 'react-router';
 
 const SingleMark = React.createClass({
 
-  handleSubmit(e) {
-    e.preventDefault();
-    var markId = Number(this.props.params.markId);
-   var cstt = Number(this.refs.cstt.value);
-   var timechecking = Number(this.refs.timechecking.value);
-   var report = Number(this.refs.report.value);
-   var demo = Number(this.refs.demo.value);
-   var material = Number(this.refs.material.value);
-   var gpa = Number(this.refs.gpa.value);
-   var result = this.refs.result.value;
-   var mark = {markId, cstt, timechecking, report, demo, material, gpa, result};
-   // alert(typeof markId);
-   this.props.fixMark(mark);
-   hashHistory.push("/marks");
-  },
 
-  render(){
-    const { markId } = this.props.params;
-    const i = this.props.marks.findIndex((mark) =>
-      mark.id === parseInt(markId, 10));
-    const mark = this.props.marks[i];
-
+  render() {
     return (
-      <div className="row single-mark-wrap">
-        <div className="col-md-8 col-md-offset-2">
-          <h4 className="text-center">Manage marks for {mark.name}</h4>
-          <form ref="managerMarkForm" className="form-group" onSubmit={this.handleSubmit}>
-            <label>Company Rates</label>
-            <input type="number" ref="cstt" placeholder="Company Rates" className="form-control" defaultValue={mark.CSTT}/>
-            <label>Time checking</label>
-            <input type="number" ref="timechecking" placeholder="Time Checking" className="form-control" defaultValue={mark.timechecking}/>
-            <label>Report</label>
-            <input type="number" ref="report" placeholder="Report" className="form-control" defaultValue={mark.report}/>
-            <label>Demo</label>
-            <input type="number" ref="demo" placeholder="Demo" className="form-control" defaultValue={mark.demo}/>
-            <label>Material</label>
-            <input type="number" ref="material" placeholder="Material" className="form-control" defaultValue={mark.material}/>
-            <label>GPA</label>
-            <input type="number" ref="gpa" placeholder="GPA" className="form-control" defaultValue={mark.GPA}/>
-            <label>Result</label>
-            <input type="text" ref="result" placeholder="Result" className="form-control" defaultValue={mark.Result}/>
-            <input type="submit" hidden/>
-            <input type="submit" className="btn btn-success btn-lg save-mark-btn" value="Save"/>
-          </form>
+      <div>
+        <div className="row">
+          <br/>
+          <div className="col-md-10 col-md-offset-1">
+            <p className="cuong-panel-title text-left">&nbsp;&nbsp;<b>Business Trip Details</b></p>
+            <div className="panel">
+              <div className="panel-body">
+                <table className="table table-hover">
+                  <thead className="content-company">
+                  <tr>
+                    <th className="text-left">ID</th>
+                    <th className="text-left">Job Details</th>
+                    <th className="text-left">Time</th>
+                    <th className="text-left">Place</th>
+                    <th className="text-left">Department</th>
+                    <th className="text-left">Partner</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td className="text-left">1</td>
+                    <td className="text-left">Dam phan voi Sphinx</td>
+                    <td className="text-left">1 tuan</td>
+                    <td className="text-left">Ho Chi Minh</td>
+                    <td className="text-left">FlC thanh hoa</td>
+                    <td className="text-left">Ninh Manh Dung</td>
+                  </tr>
+                  </tbody>
+                  <tbody>
+                  <tr>
+                    <td className="text-left">2</td>
+                    <td className="text-left">Tiep khach hoi nghi</td>
+                    <td className="text-left">1 ngay</td>
+                    <td className="text-left">Ho Chi Minh</td>
+                    <td className="text-left">Khach san binh minh</td>
+                    <td className="text-left">NGuyen Van Quy</td>
+                  </tr>
+                  </tbody>
+                  <tbody>
+                  <tr>
+                    <td className="text-left">4</td>
+                    <td className="text-left">Ky hop dong</td>
+                    <td className="text-left">1 ngay</td>
+                    <td className="text-left">Hai phong</td>
+                    <td className="text-left">Nha hang long dinh</td>
+                    <td className="text-left">Hoang Ngoc Luc</td>
+                  </tr>
+                  </tbody>
+                  <tbody>
+                  <tr>
+                    <td className="text-left">3</td>
+                    <td className="text-left">Gap doi tac Framgia</td>
+                    <td className="text-left">1 ngay</td>
+                    <td className="text-left">Ho Chi Minh</td>
+                    <td className="text-left">Dai hoc cong doan</td>
+                    <td className="text-left">Nguyen Phu Cuong</td>
+                  </tr>
+                  </tbody>
+                  <tbody>
+                  <tr>
+                    <td className="text-left">5</td>
+                    <td className="text-left">Tiep khach</td>
+                    <td className="text-left">1 ngay</td>
+                    <td className="text-left">HCM</td>
+                    <td className="text-left">Nha hang long dinh</td>
+                    <td className="text-left">Tran Huu Nam Phuong</td>
+                  </tr>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

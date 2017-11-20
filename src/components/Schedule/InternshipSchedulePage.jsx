@@ -5,26 +5,96 @@ import { Link } from 'react-router';
 const InternshipSchedulePage = React.createClass({
   render() {
     return(
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12 topic-name">
-            <h4>{this.props.schedules.topic_name}</h4>
-          </div>
-        </div>
-        <div className="row week-job">
-          <ul className="card-list truncated list-unstyled">
-            {this.props.schedules.data.map((schedule, i) =>
-              <li className="cuong-card" key={i}>
-                <Link className="card-box">
-                  <div className="card-progress">
-                    <h5>{schedule.time}</h5>
+      <div className="row">
+        <div className="col-md-8 col-md-offset-2">
+          <form class="well well-lg">
+            <h6>New Schedule</h6>
+            <div>
+              <div className="col-xs-6">
+                <div className="form-group">
+                  <label className="text-left">Title(*)</label>
+                  <input type="text" className="form-control" placeholder="enter title..." required/>
+                </div>
+                <div className="form-group">
+                  <label className="text-left">Description</label>
+                  <input type="text" placeholder="description..." className="form-control" required/>
+                </div>
+                <div className="form-group">
+                  <label className="text-left">Address(*)</label>
+                  <input type="text" placeholder="address..." className="form-control" required/>
+                </div>
+                <div className="form-group">
+                  <label className="text-left">Cost Estimate(*)</label>
+                  <input type="number"  className="form-control" required/>
+                </div>
+              </div>
+              <div className="col-xs-6">
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="form-group">
+                      <label className="text-left">Department</label>
+                      <select class="form-control" id="mai-select">
+                        <option>IT</option>
+                        <option>Marketing</option>
+                        <option>Design</option>
+                        <option>Hr</option>
+                        <option>Division</option>
+                        <option value="Other">others</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <label className="text-left">Position</label>
+                      <select class="form-control" id="mai-select">
+                        <option>CTO</option>
+                        <option>CEO</option>
+                        <option>BrSE</option>
+                        <option>Hr</option>
+                        <option>Developer</option>
+                        <option value="Other">others</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <label className="text-left">End Time(*)</label>
+                      <input type="date"  className="form-control" required/>
+                    </div>
+                    <div className="form-group">
+                      <label className="text-left">Start Time(*)</label>
+                      <input type="date"  className="form-control" required/>
+                    </div>
                   </div>
-                  <strong className="card-type">To do this week</strong>
-                  <h6 className="card-title">{schedule.job_name}</h6>
-                </Link>
-              </li>
-            )}
-          </ul>
+                </div>
+              </div>
+            </div>
+            <div className="row col-md-8">
+              <div className="row">
+                <table>
+                  <thead>
+                  <tr>
+                    <td className="text-left"><label>Job Details</label></td>
+                    <td className="text-left"><label>Time</label></td>
+                    <td className="text-left"><label>Place</label></td>
+                    <td className="text-left"><label>Department</label></td>
+                    <td className="text-left"><label>Partner</label></td>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td className="text-left"><input type="text" className="form-control"/></td>
+                    <td className="text-left"><input type="time" className="form-control"/></td>
+                    <td className="text-left"><input type="text" className="form-control"/></td>
+                    <td className="text-left"><input type="text" className="form-control"/></td>
+                    <td className="text-left"><input type="text" className="form-control"/></td>
+                    <td className="text-left">&nbsp;</td>
+                    <td className="fa fa-plus"></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <Link to="/company/:companyName"> <button type="submit" className="btn btn-success btn-lg">Submit</button></Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-danger btn-lg" onClick={this.handleCancel}>Cancel</button>
+          </form>
         </div>
       </div>
     );
