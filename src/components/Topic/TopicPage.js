@@ -45,7 +45,6 @@ const TopicPage = React.createClass({
           <h4 className="quy-panel-title text-left">
             &nbsp;&nbsp;<span className="fa fa-check"></span>
             Approve Plan</h4>
-          <i className="col-md-5 col-md-push-7 mai-note">(Click $ trong column Estimated Cost (*) de xem chi tiet du toan)</i>
           <div className="panel">
             <div className="panel-body quy-panel-body">
               <table className="table table-striped table-bordered table-list ">

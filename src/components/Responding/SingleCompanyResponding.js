@@ -15,9 +15,8 @@ const SingleClassResponding = React.createClass({
                   <div className="bgc-white bd bdrs-3 p-20 mB-20">
                     <br/>
                     <h5 className="text-left">&nbsp;
-                      <Link to="/schedule"><span className="fa fa-plus mai-plus"></span></Link> &nbsp;
+                      <Link to="/schedule"><span className="fa fa-plus mai-plus" data-toggle="tooltip" title="Create new plan"></span></Link> &nbsp;
                       Work Schedule List</h5>
-                    <div className="col-md-5 col-md-push-7"><i className="mai-note">(click icon " + " de them work schedule moi)</i></div>
                     <table id="dataTable" className="table table-striped table-bordered table-list " cellspacing="0" width="100%">
                       <thead className="mai-head">
                       <tr className="content-company">

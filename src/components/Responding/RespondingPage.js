@@ -17,6 +17,11 @@ const RespondingPage = React.createClass({
     }
   },
 
+  handleSubmit(e) {
+    e.preventDefault();
+    toastr.success("Create form done");
+  },
+
   render(){
     return(
       <div className="container">
@@ -54,7 +59,7 @@ const RespondingPage = React.createClass({
                       <div className="row">
                           <div ><span>Department: (*)</span></div>
                           <div className="dropdown">
-                            <select class="form-control" id="mai-select">
+                            <select className="form-control" id="mai-select">
                               <option>IT</option>
                               <option>Hr</option>
                               <option>Marketing</option>
@@ -92,7 +97,7 @@ const RespondingPage = React.createClass({
         </div>
       </div>
       <div className="row col-md-6 col-md-offset-4" >
-        <button type="submit" className="btn btn-success">Submit</button>
+        <button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Submit</button>
         &nbsp; &nbsp; &nbsp;
         <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
       </div>

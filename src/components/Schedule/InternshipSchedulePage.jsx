@@ -1,8 +1,16 @@
 import React from 'react';
 import './InternshipSchedulePage.css';
 import { Link } from 'react-router';
+import toastr from 'toastr';
+import { hashHistory } from 'react-router';
 
 const InternshipSchedulePage = React.createClass({
+  handleSubmit(e) {
+    e.preventDefault();
+    toastr.success("Create Schedule Successfully");
+    hashHistory.push("/company/:companyName");
+  },
+
   render() {
     return(
       <div className="row">
@@ -17,15 +25,15 @@ const InternshipSchedulePage = React.createClass({
                 </div>
                 <div className="form-group">
                   <label className="text-left">Description</label>
-                  <input type="text" placeholder="description..." className="form-control" required/>
+                  <input type="text" required placeholder="description..." className="form-control" required/>
                 </div>
                 <div className="form-group">
                   <label className="text-left">Address(*)</label>
-                  <input type="text" placeholder="address..." className="form-control" required/>
+                  <input type="text" required placeholder="address..." className="form-control" required/>
                 </div>
                 <div className="form-group">
                   <label className="text-left">Cost Estimate(*)</label>
-                  <input type="number"  className="form-control" required/>
+                  <input type="number" required className="form-control" data-toggle="tooltip" title="budget: $10000 remaining" required/>
                 </div>
               </div>
               <div className="col-xs-6">
@@ -55,11 +63,11 @@ const InternshipSchedulePage = React.createClass({
                     </div>
                     <div className="form-group">
                       <label className="text-left">End Time(*)</label>
-                      <input type="date"  className="form-control" required/>
+                      <input type="date" required className="form-control" required/>
                     </div>
                     <div className="form-group">
                       <label className="text-left">Start Time(*)</label>
-                      <input type="date"  className="form-control" required/>
+                      <input type="date" required className="form-control" required/>
                     </div>
                   </div>
                 </div>
@@ -91,7 +99,9 @@ const InternshipSchedulePage = React.createClass({
                 </table>
               </div>
             </div>
-            <Link to="/company/:companyName"> <button type="submit" className="btn btn-success btn-lg">Submit</button></Link>
+            <Link to="/company/:companyName">
+              <button type="submit" className="btn btn-success btn-lg" onClick={this.handleSubmit}>Submit</button>
+            </Link>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <button className="btn btn-danger btn-lg" onClick={this.handleCancel}>Cancel</button>
           </form>
