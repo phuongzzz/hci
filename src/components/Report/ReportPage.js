@@ -29,24 +29,38 @@ const ReportPage = React.createClass({
     }
   },
 
+  // handleSubmit(e) {
+  //   // var last_report_id = parseInt(
+  //   //   this.props.reports[this.props.reports.length - 1].id, 10);
+  //   // var next_report_id = ++last_report_id;
+  //   // var id = next_report_id;
+
+  //   // var last_student_id = parseInt(
+  //   //   this.props.reports[this.props.reports.length - 1].student_id, 10);
+  //   // var next_student_id = ++last_student_id;
+  //   // var student_id = next_student_id;
+
+  //   // var name = this.refs.name.value;
+  //   // var link = this.refs.link.value;
+  //   // this.setState({ showResponse: !this.state.showResponse });
+
+  //   // this.props.addNewReport(id, student_id, name, link);
+
+  //   toastr.success("Create payment reques done");
+  // },
+
   handleSubmit(e) {
-    var last_report_id = parseInt(
-      this.props.reports[this.props.reports.length - 1].id, 10);
-    var next_report_id = ++last_report_id;
-    var id = next_report_id;
+    e.preventDefault();
+    let card_number = this.refs.card_number.value;
+    let card_regex = /\d{16}/;
+    if (card_regex.test(card_number)) {
+      toastr.success("Create new payment request done");
+      hashHistory.push("/marks");
+    }
+    else {
+      toastr.error("check your card number one more time");
+    }
 
-    var last_student_id = parseInt(
-      this.props.reports[this.props.reports.length - 1].student_id, 10);
-    var next_student_id = ++last_student_id;
-    var student_id = next_student_id;
-
-    var name = this.refs.name.value;
-    var link = this.refs.link.value;
-    this.setState({ showResponse: !this.state.showResponse });
-
-    this.props.addNewReport(id, student_id, name, link);
-
-    toastr.success("Create payment reques done");
   },
 
   render(){
@@ -62,7 +76,7 @@ const ReportPage = React.createClass({
               <div className="row">
         <div className="col-md-8 col-md-offset-2">
               <div className="row">
-                <form id="form1" className="well well-lg">
+                <form className="well well-lg" onSubmit={this.handleSubmit}>
                 <div className="col-xs-6">
                     <div className="form-group">
                       <label>Dear (*)</label>
@@ -96,7 +110,7 @@ const ReportPage = React.createClass({
                     </div>
                     <div className="form-group">
                       <label>Card Number (*)</label>
-                      <input required type="number" className="form-control" id="exampleInputPassword1" placeholder="Card Number" form="form1" />
+                      <input required type="number" className="form-control" id="exampleInputPassword1" placeholder="Card Number" ref="card_number" />
                     </div>
                   </div>
                     <div className="form-group">
@@ -109,7 +123,7 @@ const ReportPage = React.createClass({
                         <input type="checkbox" />Choose many files
                       </label>
                     </div>
-                  <Link to="/marks" className="btn btn-success">Submit Your Request</Link>
+                  <input type="submit" className="btn btn-success" value="Submit your request"/>
                   &nbsp; &nbsp;
                   <button type="button" className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
                 </div>

@@ -6,7 +6,6 @@ import _ from 'lodash';
 
 // import { printJS } from 'print.js/';
 
-
 const MarkPage = React.createClass({
 
   getInitialState() {
@@ -32,7 +31,6 @@ const MarkPage = React.createClass({
   handleClick(e) {
     e.preventDefault();
     alert("Nut hoat dong roi ong oi");
-    // printJS('docs/printjs.pdf');
   },
 
   render() {
@@ -76,8 +74,8 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left">
-                      <p>http://drive.google.com/SIE12A</p>
-                      <p>http://dropbox.com/SIE........</p></td>
+                      <a>http://drive.google.com/SIE12A</a><br/>
+                      <a>http://dropbox.com/SIE........</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok"></Link>
@@ -94,8 +92,8 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left">
-                      <p>http://drive.google.com/SIE12A</p>
-                      <p>http://dropbox.com/SIE</p></td>
+                      <a>http://drive.google.com/SIE12A</a><br/>
+                      <a>http://dropbox.com/SIE</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
@@ -112,7 +110,7 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left">
-                      <a href="http://drive.google.com/SIE12A">http://drive.google.com/SIE12A</a>
+                      <a href="http://drive.google.com/SIE12A">http://drive.google.com/SIE12A</a><br/>
                       <a href="http://dropbox.com/SIE<">http://dropbox.com/SIE</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
@@ -130,8 +128,8 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left">
-                      <p>http://drive.google.com/SIE12A</p>
-                      <p>http://dropbox.com/SIE</p></td>
+                      <a>http://drive.google.com/SIE12A</a><br/>
+                      <a>http://dropbox.com/SIE</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
@@ -147,9 +145,9 @@ const MarkPage = React.createClass({
                     <td className="text-left">Room 6</td>
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
-                    <td>
-                      <p className="text-left">http://drive.google.com/SIE12A</p>
-                      <p className="text-left">http://dropbox.com/SIE</p></td>
+                    <td className="text-left">
+                      <a>http://drive.google.com/SIE12A</a><br/>
+                      <a>http://dropbox.dm</a></td>
                     <td>
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
@@ -166,8 +164,8 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left">
-                      <p>http://drive.google.com/SIE12A</p>
-                      <p>http://dropbox.com/SIE</p></td>
+                      <a>http://drive.google.com/SIE12A</a><br/>
+                      <a>http://dropbox.com/SIE</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
@@ -184,8 +182,8 @@ const MarkPage = React.createClass({
                     <td className="text-left">Need an limited credit card</td>
                     <td className="text-left">Infinity</td>
                     <td className="text-left link-driver">
-                      <p><i>http://drive.google.com/SIE12A</i></p>
-                      <p>http://dropbox.com/SIE</p></td>
+                      <a>http://drive.google.com/SIE12A</a><br/>
+                      <a>http://dropbox.com/SIE</a></td>
                     <td className="text-left">
                       <div className="row quy-button" >
                         <Link to="/assigns" className="col-md-2 col-md-offset-2 glyphicon glyphicon-ok" ></Link>
