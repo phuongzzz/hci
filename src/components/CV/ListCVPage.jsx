@@ -20,6 +20,23 @@ const ListCVPage = React.createClass({
     else document.getElementById('div1').innerHTML = '';
   },
 
+  handleSubmit(e) {
+    e.preventDefault();
+    let phone = this.refs.phone.value;
+    let phone_regex = /\d{11}/;
+    let bank = this.refs.bank.value;
+    let bank_regex = /\d{11}/;
+    let email = this.refs.email.value;
+    let email_regex = /^[a-z0-9_\-\.]{2,}@[a-z0-9_\-\.]{2,}\.[a-z]{2,}$/i;
+
+    if((phone_regex.test(phone)) && email_regex.test(email) && bank_regex.test(bank)){
+      toastr.success("Create done");
+      hashHistory.push("/topics");
+    } else {
+      toastr.error("Recheck your information (phone or email or bank account)");
+    }
+  },
+
   render() {
     return (
       <div className="container">
@@ -43,7 +60,7 @@ const ListCVPage = React.createClass({
                         <div className="row">
                           <div><p className="title-plan"><b>Phone (*)</b></p></div>
                           <div><span><input required type="number" className="cuong-input-box form-control"
-                                            placeholder="Enter Your Phone Number Here..."/></span></div>
+                            placeholder="Enter Your Phone Number Here..." ref="phone"/></span></div>
                         </div>
                       </li>
                       <hr/>
@@ -51,7 +68,7 @@ const ListCVPage = React.createClass({
                         <div className="row">
                           <div><p className="title-plan"><b>Email (*)</b></p></div>
                           <div><span><input required type="text" className="cuong-input-box form-control"
-                                            placeholder="Enter Your Email Here.."/></span></div>
+                            placeholder="Enter Your Email Here.." ref="email"/></span></div>
                         </div>
                       </li>
                       <hr/>
@@ -59,7 +76,7 @@ const ListCVPage = React.createClass({
                         <div className="row">
                           <div><p className="title-plan"><b>Bank Account (*)</b></p></div>
                           <div><span><input type="number" required className="cuong-input-box form-control"
-                                            placeholder="Enter Your Bank Account Here..."/></span></div>
+                                            placeholder="Enter Your Bank Account Here..." ref="bank"/></span></div>
                         </div>
                       </li>
                       <hr/>
@@ -78,7 +95,7 @@ const ListCVPage = React.createClass({
                       <li>
                         <div className="row">
                           <div><p className="title-plan"> <b>Choose Work Schedule now (*)</b></p></div>
-                          <select class="form-control" id="mai-select">
+                          <select className="form-control" id="mai-select">
                             <option>Dam phan khach hang nhat</option>
                             <option>Giam sat du an tai Tokyo	</option>
                             <option>Khao sat thi truong sanfancisco	</option>
@@ -98,7 +115,7 @@ const ListCVPage = React.createClass({
                       <li>
                         <div className="row">
                           <div><p className="title-plan"><b>Place (*)</b></p></div>
-                          <select class="form-control" id="mai-select">
+                          <select className="form-control" id="mai-select">
                             <option>Ha Noi</option>
                             <option>Hai Phong</option>
                             <option>Khanh Hoa</option>
@@ -123,7 +140,7 @@ const ListCVPage = React.createClass({
                         <div><p className="title-plan"><b>Department (*)</b></p></div>
                         <div>
                           <div className="dropdown">
-                            <select class="form-control" id="mai-select">
+                            <select className="form-control" id="mai-select">
                               <option>IT</option>
                               <option>Hr</option>
                               <option>Marketing</option>
@@ -159,7 +176,7 @@ const ListCVPage = React.createClass({
                       <tr>
                         <td className="text-left">1</td>
                         <td className="text-left">
-                          <select class="form-control" id="mai-select1">
+                          <select className="form-control" id="">
                             <option>Dam phan voi Sphinx</option>
                             <option>Tiep khach hoi nghi</option>
                             <option>Tham du dien dan</option>
@@ -187,7 +204,7 @@ const ListCVPage = React.createClass({
                       <tr>
                         <td className="text-left">2</td>
                         <td className="text-left">
-                          <select class="form-control" id="mai-select1">
+                          <select className="form-control" id="">
                             <option>Khao sat thi truong</option>
                             <option>Tiep khach hoi nghi</option>
                             <option>Tham du dien dan</option>
@@ -215,7 +232,7 @@ const ListCVPage = React.createClass({
                       <tr>
                         <td className="text-left">3</td>
                         <td className="text-left">
-                          <select class="form-control" id="mai-select1">
+                          <select className="form-control" id="">
                             <option>Thu mua nguyen vat lieu</option>
                             <option>Tiep khach hoi nghi</option>
                             <option>Tham du dien dan</option>
@@ -236,6 +253,7 @@ const ListCVPage = React.createClass({
                       </tr>
                       </tbody>
                       <tbody>
+                      <tr>
                       <td className="text-left">&nbsp;4</td>
                       <td className="text-left">&nbsp;&nbsp;
                         <a href=""><span className="fa fa-plus"></span></a>
@@ -245,9 +263,10 @@ const ListCVPage = React.createClass({
                       <td>.....................</td>
                       <td>.....................</td>
                       <td>.....................</td>
+                      </tr>
                       </tbody>
                     </table>
-                    <button type="submit" className="btn btn-success btn-lg">Submit</button>
+                    <button type="submit" className="btn btn-success btn-lg" onClick={this.handleSubmit}>Submit</button>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <button className="btn btn-danger btn-lg" onClick={this.handleCancel}>Cancel</button>
                   </div>
