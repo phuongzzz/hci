@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import './listcv.css';
 import {hashHistory} from 'react-router';
 import toastr from 'toastr';
+// import $ from 'jquery';
 // import {Icon} from 'react-fa';
 
 const ListCVPage = React.createClass({
@@ -35,6 +36,16 @@ const ListCVPage = React.createClass({
     } else {
       toastr.error("Recheck your information (phone or email or bank account)");
     }
+  },
+
+  handleSelect(e) {
+    // e.preventDefault();
+    // var price = this.get_random([12345, 429123, 28131]);
+    // this.refs.phuong_money.innerHTML = price;
+  },
+
+  get_random(list) {
+    return list[Math.floor((Math.random()*list.length))];
   },
 
   render() {
@@ -95,7 +106,7 @@ const ListCVPage = React.createClass({
                       <li>
                         <div className="row">
                           <div><p className="title-plan"> <b>Choose Work Schedule now (*)</b></p></div>
-                          <select className="form-control" id="mai-select">
+                          <select className="form-control" id="mai-select" ref="phuong_money" onClick={this.handleSelect}>
                             <option>Dam phan khach hang nhat</option>
                             <option>Giam sat du an tai Tokyo	</option>
                             <option>Khao sat thi truong sanfancisco	</option>
@@ -130,7 +141,7 @@ const ListCVPage = React.createClass({
                         <div className="row">
                           <div><p className="title-plan"><b>Estimated Cost (*)</b></p></div>
                           <div><span className="fa fa-money money">
-                            &nbsp; Allowability: $320,800
+                            &nbsp; Allowability: <span className="phuong-money">$320,800</span>
                             <hr/>
                             <Link to="/classe/:className"><i className="dutoan"><u>Detailed cost estimates*</u></i></Link>
                           </span></div>

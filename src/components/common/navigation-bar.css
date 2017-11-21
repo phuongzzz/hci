@@ -55,11 +55,12 @@ a > .mai-logout {
 }
 
 .log-btn {
-  margin-top: 6px;
-  margin-right: 30px;
+  margin-top: 4px;
+  margin-right: 10px;
   font-size: 2rem;
   color: #ffffff;
   font-weight: 600;
+  margin-bottom: 6px;
   /* font-family: Exo; */
 }
 
